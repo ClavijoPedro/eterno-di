@@ -1,0 +1,19 @@
+#header{
+    border-bottom: 4px solid magenta;
+    background-color: cyan;
+    .logo{
+        max-width: 90px;
+        max-height: 90px;
+    }
+    .nav-item a{
+        color: #141414;
+        font-weight: 800;
+        text-transform: uppercase;
+        &:hover{
+            color:#dd00dd;
+            transform: scale(108%);
+        }
+    }
+}
+
+

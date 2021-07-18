@@ -1,0 +1,103 @@
+
+.imgService{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.contDetalleServicio{
+    width: 100%;
+    height: 100vh;
+    background-color: #c70988;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .textContent{
+        height: 50%;
+        margin: 0 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .description{
+            text-align: center;
+        }
+    }
+    .iconText{
+        height: 50%;
+        background-color: cyan;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .img1{
+        background-position: center;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        border-radius: 50% 50%;
+    }
+    .img2{
+        background-position: center;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        border-radius: 50% 50%;
+    }
+}
+.contDiseñoProducto{
+    box-shadow: 5px 5px 10px #00000071;
+    .imgService{
+        background-image: url(../media/diseno.jpg);
+    }
+    .iconText{
+        .img1{
+            background-image: url(../media/modelado.jpg);
+        } 
+        .img2{
+            background-image: url(../media/modelado.jpg);
+        }
+    }
+}
+.contImpre3d{
+    box-shadow: 5px 5px 10px #00000071;
+    .imgService{
+        background-image: url(../media/impresion.jpg);
+    }
+    .iconText{
+        .img1{
+            background-image: url(../media/impresion.jpg);
+        }
+        .img2{
+            background-image: url(../media/impresion.jpg);
+        }
+    } 
+}
+.contModelado3d{
+    box-shadow: 5px 5px 10px #00000071;
+    .imgService{
+        background-image: url(../media/modelado.jpg);
+    }
+    .iconText{
+        .img1{
+            background-image: url(../media/modelado.jpg);
+        } 
+        .img2{
+            background-image: url(../media/modelado.jpg);
+        }
+    } 
+} 
+.contPrototipos{
+    box-shadow: 5px 5px 10px #00000071;
+    .imgService{
+        background-image: url(../media/prototipo.jpg);
+    }
+    .iconText{
+        .img1{
+            background-image: url(../media/prototipo.jpg);
+        }
+        .img2{
+            background-image: url(../media/prototipo.jpg);
+        }
+    } 
+} 

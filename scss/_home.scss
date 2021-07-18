@@ -1,0 +1,163 @@
+@mixin caja-descripcion($direccion: column){
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: $direccion;
+    align-items: center;
+}
+@mixin text-block($alto:50vh, $ancho:100%){
+    height: $alto;
+    width: $ancho;
+    text-align: center;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 0 80px;   
+}
+@mixin img-block($bgn, $alto:50vh, $ancho:100%){
+    height: $alto;
+    width: $ancho;
+    background-image: url(../media/#{$bgn}.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@mixin servicio-block{
+    height: 50vh;
+    width: 80%;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: 5px  solid cyan;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+/*-------------------HOME-----------*/
+.slideHome{
+    border-bottom: 4px solid cyan;
+    @each $v in $slide-img{
+        .carousel-item.img-#{$v}{
+            background-image: url(../media/#{$v}.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 85vh;
+        }
+    }
+    .carousel-caption{
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        .textSlide{
+            background-color: #0000006c;
+            color: whitesmoke;
+            width: 100%;
+            height: 200px;
+            font-size: 2rem;
+            font-weight: 800;
+            .botonSlide{
+                background-color: #00f7ff;
+                color: #c70988;
+                width: 150px;
+                height: 70px;
+                font-weight: 800;
+                font-size: 22px;
+                box-shadow: 5px 5px 10px #00000071;
+                &:hover{
+                    background-color: rgb(81, 255, 255);
+                    color: magenta;
+                    border: 2px solid magenta;
+                }
+            }
+        }
+    }
+}
+/*----------------NOSOTROS----------------------*/
+.contNosotros{
+    background-color: #c70988;
+    
+    .textNosotros{
+        @include text-block;
+    }
+    .imgNosotros{
+        @include img-block(nosotross)
+    }
+}
+/*-----------------BENEFICIOS------------------------*/
+.contBeneficios{
+    background-color: rgb(0, 236, 236);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-bottom: 70px;
+    .beneficio{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 70px;
+    }
+    .icon{
+        margin-bottom: 20px;
+    }
+    p{
+        text-transform: uppercase;
+        color: #313131;
+        width: 32%;
+        font-weight: 800;
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+}
+/*-------------------PROYECTOS------------------*/
+.contProyectos{
+    background-color: #c70988;
+    .textProyectos{
+        @include text-block;
+    } 
+    .imgProyectos{
+        @include img-block(diseno)
+    }
+}
+/*---------------SERVICIOS-----------------------------------------------*/
+.contServicios{
+    width: 100%;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+    @each $v in $servicios-block{
+        .serv-#{$v}{
+            background-image: url(../media/#{$v}.jpg);
+            @include servicio-block;
+            box-shadow: 5px 5px 10px #00000071;
+        }
+    }
+    h3{
+        width: 100%;
+        background-color: #000000b9;
+        margin: 0;
+        padding: 10px 0;
+        border-top: 4px solid #ce00ce;
+    }
+}
+
+
+
+
+

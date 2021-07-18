@@ -1,0 +1,1258 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------------------------------REGLAS GENERALES----*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  /*background-color: rgb(53, 53, 53);*/
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+  line-height: 50px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+  line-height: 50px;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+}
+
+.tituloSec {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+}
+
+/*----------MAP-ANCHOS--------------------*/
+.bloque-s {
+  width: 25%;
+}
+
+.bloque-m {
+  width: 50%;
+}
+
+.bloque-l {
+  width: 75%;
+}
+
+.bloque-f {
+  width: 100%;
+}
+
+.botonDeg-1 {
+  color: linear-gradient(0deg, #c100cf 11%, #5184ea 56%, #00e4ff 110%);
+}
+
+.botonDeg-2 {
+  color: linear-gradient(0deg, #c100cf 12%, #5184ea 102%, #00e4ff 210%);
+}
+
+.botonDeg-3 {
+  color: linear-gradient(0deg, #c100cf 13%, #5184ea 148%, #00e4ff 310%);
+}
+
+#header {
+  border-bottom: 4px solid magenta;
+  background-color: cyan;
+}
+
+#header .logo {
+  max-width: 90px;
+  max-height: 90px;
+}
+
+#header .nav-item a {
+  color: #141414;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#header .nav-item a:hover {
+  color: #dd00dd;
+  -webkit-transform: scale(108%);
+          transform: scale(108%);
+}
+
+/*-------------------HOME-----------*/
+.slideHome {
+  border-bottom: 4px solid cyan;
+}
+
+.slideHome .carousel-item.img-diseno {
+  background-image: url(../media/diseno.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+}
+
+.slideHome .carousel-item.img-proceso {
+  background-image: url(../media/proceso.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+}
+
+.slideHome .carousel-item.img-prototipo {
+  background-image: url(../media/prototipo.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+}
+
+.slideHome .carousel-caption {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.slideHome .carousel-caption .textSlide {
+  background-color: #0000006c;
+  color: whitesmoke;
+  width: 100%;
+  height: 200px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.slideHome .carousel-caption .textSlide .botonSlide {
+  background-color: #00f7ff;
+  color: #c70988;
+  width: 150px;
+  height: 70px;
+  font-weight: 800;
+  font-size: 22px;
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.slideHome .carousel-caption .textSlide .botonSlide:hover {
+  background-color: #51ffff;
+  color: magenta;
+  border: 2px solid magenta;
+}
+
+/*----------------NOSOTROS----------------------*/
+.contNosotros {
+  background-color: #c70988;
+}
+
+.contNosotros .textNosotros {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  padding: 0 80px;
+}
+
+.contNosotros .imgNosotros {
+  height: 50vh;
+  width: 100%;
+  background-image: url(../media/nosotross.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/*-----------------BENEFICIOS------------------------*/
+.contBeneficios {
+  background-color: #00ecec;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 70px;
+}
+
+.contBeneficios .beneficio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 70px;
+}
+
+.contBeneficios .icon {
+  margin-bottom: 20px;
+}
+
+.contBeneficios p {
+  text-transform: uppercase;
+  color: #313131;
+  width: 32%;
+  font-weight: 800;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+/*-------------------PROYECTOS------------------*/
+.contProyectos {
+  background-color: #c70988;
+}
+
+.contProyectos .textProyectos {
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  padding: 0 80px;
+}
+
+.contProyectos .imgProyectos {
+  height: 50vh;
+  width: 100%;
+  background-image: url(../media/diseno.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/*---------------SERVICIOS-----------------------------------------------*/
+.contServicios {
+  width: 100%;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 70px;
+}
+
+.contServicios .serv-proceso {
+  background-image: url(../media/proceso.jpg);
+  height: 50vh;
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 5px  solid cyan;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 70px;
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contServicios .serv-modelado {
+  background-image: url(../media/modelado.jpg);
+  height: 50vh;
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 5px  solid cyan;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 70px;
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contServicios .serv-impresion {
+  background-image: url(../media/impresion.jpg);
+  height: 50vh;
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 5px  solid cyan;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 70px;
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contServicios .serv-prototipo {
+  background-image: url(../media/prototipo.jpg);
+  height: 50vh;
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 5px  solid cyan;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 70px;
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contServicios h3 {
+  width: 100%;
+  background-color: #000000b9;
+  margin: 0;
+  padding: 10px 0;
+  border-top: 4px solid #ce00ce;
+}
+
+.gridNosotros {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "hist" "ele";
+}
+
+.gridNosotros .contHistoria {
+  height: 110vh;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hist;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  background-color: #d9ffff;
+}
+
+.gridNosotros .contHistoria .texthist {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridNosotros .contHistoria .texthist p {
+  padding: 0 60px;
+  text-align: left;
+}
+
+.gridNosotros .contHistoria .imgHistoria {
+  width: 100%;
+  height: 50%;
+  background-image: url(../media/nosotross.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.contElegirnos {
+  height: 110vh;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: ele;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #d9ffff;
+}
+
+.contElegirnos .imgElegirnos {
+  width: 100%;
+  height: 50%;
+  background-image: url(../media/elegirnos.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.contElegirnos .textEle {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contElegirnos .textEle p {
+  padding: 0 60px;
+  text-align: left;
+}
+
+.imgService {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.contDetalleServicio {
+  width: 100%;
+  height: 100vh;
+  background-color: #c70988;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contDetalleServicio .textContent {
+  height: 50%;
+  margin: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contDetalleServicio .textContent .description {
+  text-align: center;
+}
+
+.contDetalleServicio .iconText {
+  height: 50%;
+  background-color: cyan;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contDetalleServicio .img1 {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50% 50%;
+}
+
+.contDetalleServicio .img2 {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50% 50%;
+}
+
+.contDiseñoProducto {
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contDiseñoProducto .imgService {
+  background-image: url(../media/diseno.jpg);
+}
+
+.contDiseñoProducto .iconText .img1 {
+  background-image: url(../media/modelado.jpg);
+}
+
+.contDiseñoProducto .iconText .img2 {
+  background-image: url(../media/modelado.jpg);
+}
+
+.contImpre3d {
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contImpre3d .imgService {
+  background-image: url(../media/impresion.jpg);
+}
+
+.contImpre3d .iconText .img1 {
+  background-image: url(../media/impresion.jpg);
+}
+
+.contImpre3d .iconText .img2 {
+  background-image: url(../media/impresion.jpg);
+}
+
+.contModelado3d {
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contModelado3d .imgService {
+  background-image: url(../media/modelado.jpg);
+}
+
+.contModelado3d .iconText .img1 {
+  background-image: url(../media/modelado.jpg);
+}
+
+.contModelado3d .iconText .img2 {
+  background-image: url(../media/modelado.jpg);
+}
+
+.contPrototipos {
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.contPrototipos .imgService {
+  background-image: url(../media/prototipo.jpg);
+}
+
+.contPrototipos .iconText .img1 {
+  background-image: url(../media/prototipo.jpg);
+}
+
+.contPrototipos .iconText .img2 {
+  background-image: url(../media/prototipo.jpg);
+}
+
+/*-------------------------------GALERIA---------------------------*/
+.galeria {
+  margin-bottom: 80px;
+}
+
+.galeria .tituloSec {
+  background-color: #ea00ff;
+  border-radius: 0px 0 20px 25px;
+  color: #333333;
+}
+
+.galeria .itemGaleria {
+  margin: 0 !important;
+  padding: 20px;
+}
+
+.galeria .itemGaleria img {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 5px 5px 10px #00000071;
+          box-shadow: 5px 5px 10px #00000071;
+}
+
+.galeria .itemGaleria img:hover {
+  -webkit-transform: scale(115%);
+          transform: scale(115%);
+  border: 4px solid #d400d4;
+  -webkit-transition: all 800ms;
+  transition: all 800ms;
+}
+
+.contContacto {
+  width: 100%;
+  text-align: center;
+}
+
+.contContacto .formulario {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contContacto .formulario .tituloSec {
+  color: #006666;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
+}
+
+.contContacto .formulario .clienteEmpresa {
+  width: 260px;
+  margin-bottom: 20px;
+  border: 3px solid cyan;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 3px 3px 5px #00000046;
+          box-shadow: 3px 3px 5px #00000046;
+}
+
+.contContacto .formulario .clienteEmpresa input {
+  margin: 20px;
+}
+
+.contContacto .formulario .block {
+  display: block;
+  width: 260px;
+  border: 3px solid #00e6e6;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 3px 3px 5px #00000046;
+          box-shadow: 3px 3px 5px #00000046;
+}
+
+.contContacto .formulario .boton {
+  background-color: #00f7ff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: #c70988;
+  font-size: 25px;
+  font-weight: 800;
+  margin-top: 20px;
+  -webkit-box-shadow: 3px 3px 5px #00000046;
+          box-shadow: 3px 3px 5px #00000046;
+}
+
+.contContacto .contacto {
+  background-color: #00e6e6;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contContacto .contacto li {
+  list-style: none;
+  padding-bottom: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+}
+
+.contContacto .animate__fadeIn {
+  --animate-duration: 3s;
+}
+
+.contContacto .animate__fadeInRight {
+  --animate-duration: 3s;
+  --animate-delay: 1s;
+}
+
+#recibe {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: #9affff;
+}
+
+#recibe .tituloSec {
+  padding-top: 350px;
+}
+
+#footer {
+  background-color: #0e0e0e;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+  border-top: 4px solid cyan;
+}
+
+#footer .logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+#footer .logo img {
+  display: block;
+  width: 100%;
+}
+
+#footer .navFoot ul {
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#footer .navFoot ul a {
+  text-decoration: none;
+  color: #0f0f0f;
+  display: block;
+  margin: 5px;
+}
+
+#footer .navFoot ul a:hover {
+  color: #dd00dd;
+  -webkit-transform: scale(108%);
+          transform: scale(108%);
+}
+
+#footer .maps {
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+}
+
+#footer .social img {
+  max-width: 60px;
+  margin: 0 15px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .slideHome .botonSlide {
+    display: none;
+  }
+  #footer .logo {
+    display: none;
+  }
+  #footer .navFoot {
+    display: none;
+  }
+  #footer .maps {
+    display: none;
+  }
+  #footer .social img {
+    max-width: 60px;
+    margin: 0 50px;
+  }
+}
+
+/*-------------------------------------------------------medida iPad Chrome*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .slideHome .textSlide {
+    font-size: 5rem;
+  }
+  .slideHome .botonSlide {
+    display: none;
+  }
+  .contNosotros, .contProyectos, .contBeneficios, .contServicios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contNosotros .textNosotros, .contNosotros .imgNosotros, .contProyectos .textProyectos, .contProyectos .imgProyectos {
+    width: 50%;
+    height: 100vh;
+    padding: 60px;
+  }
+  .contBeneficios {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100vh;
+    padding: 0;
+  }
+  .contBeneficios .beneficio {
+    width: 50%;
+    height: 25vh;
+    margin: 0;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .contBeneficios .icon {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  .contBeneficios p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 50%;
+  }
+  .contServicios {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contServicios .serv-proceso, .contServicios .serv-modelado, .contServicios .serv-impresion, .contServicios .serv-prototipo {
+    width: 42%;
+    height: 50vh;
+  }
+  #footer .logo {
+    display: none;
+  }
+  #footer .navFoot {
+    display: none;
+  }
+  #footer .maps {
+    display: none;
+  }
+  #footer .social img {
+    max-width: 70px;
+    margin: 0 70px;
+  }
+  /*-------------------------------------------------SECCION NOSOTROS*/
+  .gridNosotros {
+        grid-template-areas: "hist hist" "ele ele";
+  }
+  .gridNosotros .contHistoria {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 85vh;
+  }
+  .gridNosotros .contHistoria .texthist {
+    height: 100%;
+  }
+  .gridNosotros .contHistoria .imgHistoria {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 85vh;
+  }
+  .gridNosotros .contElegirnos .imgElegirnos {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos .textEle {
+    height: 100%;
+  }
+}
+
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width: 992px) {
+  #header {
+    background-color: white;
+    border-bottom: 5px solid cyan;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .slideHome {
+    border-bottom: 4px solid #c70988;
+  }
+  .slideHome .carousel-caption {
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  .slideHome .carousel-caption .textSlide {
+    background-color: #0000006c;
+    color: whitesmoke;
+    width: 500px;
+    height: 300px;
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .contNosotros, .contProyectos {
+    height: 105vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contNosotros .textNosotros, .contNosotros .imgNosotros {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    color: #0e0e0e;
+  }
+  .contBeneficios {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 50vh;
+    border-top: 4px solid #c70988;
+    border-bottom: 4px solid #c70988;
+    padding: 0;
+  }
+  .contBeneficios .beneficio {
+    margin: 0;
+  }
+  .contBeneficios .beneficio .icon {
+    display: block;
+    width: 120px;
+  }
+  .contBeneficios .beneficio p {
+    width: 80%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .contProyectos .imgProyectos, .contProyectos .textProyectos {
+    height: 100%;
+    background-color: white;
+    color: #0e0e0e;
+  }
+  .contServicios {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+    padding: 0px;
+    border-top: 4px solid #c70988;
+  }
+  .contServicios .serv-proceso, .contServicios .serv-modelado, .contServicios .serv-impresion, .contServicios .serv-prototipo {
+    height: 50vh;
+    width: 22%;
+    border: 4px solid cyan;
+    background-size: cover;
+    margin: 0;
+  }
+  .contServicios .serv-proceso:hover, .contServicios .serv-modelado:hover, .contServicios .serv-impresion:hover, .contServicios .serv-prototipo:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+  }
+  #footer {
+    border-top: 4px solid cyan;
+    background-color: white;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0;
+  }
+  /*------------------------------------------------SECCION NOSOTROS*/
+  .gridNosotros {
+        grid-template-areas: "hist hist" "ele ele";
+  }
+  .gridNosotros .contHistoria {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  .gridNosotros .contHistoria .texthist {
+    height: 100%;
+  }
+  .gridNosotros .contHistoria .imgHistoria {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  .gridNosotros .contElegirnos .imgElegirnos {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos .textEle {
+    height: 100%;
+  }
+  /*-----------------------------------------------SECCION SERVICIOS*/
+  .contDetalleServicio {
+    background-color: white;
+  }
+  .contDetalleServicio .iconText {
+    height: 25%;
+  }
+  .contDetalleServicio .iconText .img1, .contDetalleServicio .iconText .img2 {
+    margin-bottom: 180px;
+  }
+  .contDiseñoProducto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 200px 0;
+  }
+  .contImpre3d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 200px 0;
+  }
+  .contModelado3d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 200px 0;
+  }
+  .contPrototipos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 200px 0;
+  }
+  /*----------------------------------------------------CONTACTO---*/
+  .contContacto {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .contContacto .formulario {
+    width: 50%;
+    height: 110vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contContacto .formulario .tituloSec {
+    color: #006666;
+    margin-bottom: 50px;
+  }
+  .contContacto .formulario .clienteEmpresa {
+    border: 3px solid #00e6e6;
+    border-radius: 10px;
+    width: 260px;
+    margin-bottom: 20px;
+    padding: 0px;
+  }
+  .contContacto .formulario .block {
+    display: block;
+    border: 3px solid #00e6e6;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  .contContacto .formulario .boton {
+    background-color: #00f7ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: #c70988;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 20px;
+  }
+  .contContacto .formulario .boton:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    border: 2px solid magenta;
+    color: magenta;
+  }
+  .contContacto .contacto {
+    background-color: #00e6e6;
+    width: 50%;
+    height: 110vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contContacto .contacto li {
+    list-style: none;
+    padding-bottom: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

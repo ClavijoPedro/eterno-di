@@ -1,0 +1,55 @@
+@mixin contenedor-grid ($area, $direccion){
+    height: 110vh;
+    grid-area: $area;
+    display: flex;
+    flex-direction: $direccion;
+    background-color: #d9ffff;
+}
+@mixin text-grid{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin img-grid ($bgn){
+    width: 100%;
+    height: 50%;
+    background-image: url(../media/#{$bgn}.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gridNosotros{
+    display: grid;
+    grid-template-areas: 
+    "hist"
+    "ele";
+    .contHistoria{
+        @include contenedor-grid(hist, column-reverse);
+        .texthist{
+            @include text-grid;
+            p{
+                padding: 0 60px;
+                text-align: left;
+            }
+        }
+        .imgHistoria{
+            @include img-grid(nosotross);
+        }
+    } 
+}
+.contElegirnos{
+    @include contenedor-grid(ele, column);
+    .imgElegirnos{
+        @include img-grid(elegirnos);
+    }
+    .textEle{
+        @include text-grid;
+        p{
+            padding: 0 60px;
+            text-align: left;
+        }
+    }
+}
+
