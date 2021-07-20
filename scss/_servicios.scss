@@ -1,9 +1,8 @@
-
 .imgService{
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 }
 .contDetalleServicio{
     width: 100%;
@@ -44,8 +43,9 @@
         height: 200px;
         border-radius: 50% 50%;
     }
+
 }
-.contDiseñoProducto{
+.contDisenoProducto{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/diseno.jpg);
@@ -100,4 +100,42 @@
             background-image: url(../media/prototipo.jpg);
         }
     } 
-} 
+}
+/*---------------------------------------media queries----------------------------*/ 
+@media (min-width:992px){
+    .imgService{
+        height: 100vh;
+    }
+    .contDetalleServicio{
+        background-color: white;
+        .iconText{
+            height: 25%;
+            .img1, .img2{
+                margin-bottom: 180px;
+            }
+        }
+    }
+    .contDisenoProducto{
+        display: flex;
+        flex-direction: row;
+        margin: 200px 0;  
+    }
+    .contImpre3d{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 200px 0;
+
+    }
+    .contModelado3d{
+        display: flex;
+        flex-direction: row;
+        margin: 200px 0;
+
+    }
+    .contPrototipos{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 200px 0;
+
+    }
+}

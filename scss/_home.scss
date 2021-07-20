@@ -64,21 +64,11 @@
             height: 200px;
             font-size: 2rem;
             font-weight: 800;
-            .botonSlide{
-                background-color: #00f7ff;
-                color: #c70988;
-                width: 150px;
-                height: 70px;
-                font-weight: 800;
-                font-size: 22px;
-                box-shadow: 5px 5px 10px #00000071;
-                &:hover{
-                    background-color: rgb(81, 255, 255);
-                    color: magenta;
-                    border: 2px solid magenta;
-                }
+            .boton{
+                display: none;
             }
         }
+
     }
 }
 /*----------------NOSOTROS----------------------*/
@@ -130,7 +120,7 @@
         @include text-block;
     } 
     .imgProyectos{
-        @include img-block(diseno)
+        @include img-block(diseno) 
     }
 }
 /*---------------SERVICIOS-----------------------------------------------*/
@@ -157,7 +147,150 @@
     }
 }
 
-
+/*----------------------------media queries---------------------------*/
+@media (min-width: 576px) and (max-width:767px){
+    .slideHome{
+        .boton{
+            display: none;
+        }
+    }
+}
+/*-------------------------------------------------------medida M---*/
+@media (min-width:768px) and (max-width:991px){
+    .slideHome{
+        .textSlide{
+            font-size: 5rem;
+        }
+        .boton{
+            display: none;
+        }
+    }
+    .contNosotros, .contProyectos, .contBeneficios, .contServicios{
+        display: flex;
+    }
+    .contNosotros .textNosotros, .contNosotros .imgNosotros, .contProyectos .textProyectos, .contProyectos .imgProyectos{
+        width: 50%;
+        height: 100vh;
+        padding: 60px;
+    }
+    .contBeneficios{
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 100vh;
+        padding: 0;
+        .beneficio{
+            width: 50%;
+            height: 25vh;
+            margin: 0;
+            align-content: center;
+        }
+        .icon{
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+            width: 50%;
+        }
+    }
+    .contServicios{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .serv-proceso, .serv-modelado, .serv-impresion, .serv-prototipo{
+            width: 42%;
+            height: 50vh;
+        }
+    }
+}
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width:992px){
+    #header{
+        background-color: white;
+        border-bottom: 5px solid cyan;
+        justify-content: space-between;
+    }
+    .slideHome{
+        border-bottom: 4px solid #c70988;
+        .carousel-caption{
+            height: 100%;
+            width: 100%;
+            top: 0;
+            .textSlide{
+                background-color: #0000006c;
+                color: whitesmoke;
+                width: 500px;
+                height: 300px;
+                border-radius: 50px;
+                font-size: 2rem;
+                font-weight: 800;
+                .boton{
+                    @include boton;
+                    display: block;
+                    width: 150px;
+                    height: 70px;     
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .contNosotros, .contProyectos{
+        height: 105vh;
+        display: flex;
+    }
+    .contNosotros{
+        .textNosotros, .imgNosotros{
+            height: 100%;
+            width: 50%;
+            background-color: white;
+            color: #0e0e0e;
+        }
+    } 
+    .contBeneficios{
+        flex-direction: row;
+        height: 50vh;
+        border-top: 4px solid #c70988;
+        border-bottom: 4px solid #c70988;
+        padding: 0;
+        .beneficio{
+            margin: 0;
+            .icon{
+                display: block;
+                width: 120px;
+            }
+            p{
+                width: 80%;
+                text-align: center;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .contProyectos .imgProyectos, .contProyectos .textProyectos{
+        height: 100%;
+        background-color: white;
+        color: #0e0e0e;
+    }
+    .contServicios{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        padding: 0px;
+        border-top: 4px solid #c70988;
+        .serv-proceso, .serv-modelado, .serv-impresion, .serv-prototipo{
+            height: 50vh;
+            width: 22%;
+            border: 4px solid cyan;
+            background-size: cover;
+            margin: 0;
+            &:hover{
+                transform: scale(1.1);
+                transition: all 600ms;
+            }
+        }
+    }
+}
 
 
 

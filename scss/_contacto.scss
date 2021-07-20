@@ -3,20 +3,20 @@
     text-align: center;
     .formulario{
         width: 100%;
-        height: 100vh;
+        height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         .tituloSec{
-            color: rgb(0, 102, 102);
+            color: #00b6b6;
             margin-bottom: 50px;
             text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
         }
         .clienteEmpresa{
             width: 260px;
             margin-bottom: 20px;
-            border: 3px solid cyan;
+            border: $borderColor1;
             border-radius: 10px;
             padding: 5px;
             box-shadow: 3px 3px 5px #00000046;
@@ -27,23 +27,14 @@
         .block{
             display: block;
             width: 260px;
-            border: 3px solid #00e6e6;
+            border: $borderColor2;
             border-radius: 10px;
             padding: 5px;
             margin-bottom: 20px;
             box-shadow: 3px 3px 5px #00000046;
         }
         .boton{
-            background-color: #00f7ff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: none;
-            color: #c70988;
-            font-size: 25px;
-            font-weight: 800;
-            margin-top: 20px;
-            box-shadow: 3px 3px 5px #00000046;
+            @include boton;
         }
     }
     .contacto{
@@ -57,10 +48,11 @@
         li{
             list-style: none;
             padding-bottom: 50px;
-            font-size: 2rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: white;
             text-align: left;
+            text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
         }
     }
     .animate__fadeIn{
@@ -69,5 +61,23 @@
     .animate__fadeInRight{
         --animate-duration: 3s;
         --animate-delay: 1s;
+    }
+}
+
+/*--------------------media queries----------------------*/
+@media (min-width:992px){
+    .contContacto{
+        width: 100%;
+        display: flex;
+        .formulario{
+            width: 50%;
+        }
+        .contacto{
+            width: 50%;
+            height: 110vh;
+            li{
+                font-size: 2rem;
+            }
+        }
     }
 }

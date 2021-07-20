@@ -52,4 +52,64 @@
         }
     }
 }
+/*-------------------------------------media queries-----------------------------------*/
+@media (min-width:768px) and (max-width:991px){
+    .gridNosotros{
+        grid-template-areas:
+        "hist hist"
+        "ele ele";
+        .contHistoria{
+            flex-direction: row;
+            width: 100%;
+            height: 85vh;
+            .texthist{
+                height: 100%;
+            }
+            .imgHistoria{
+                height: 100%;
+            }
+        }
+        .contElegirnos{
+            flex-direction: row;
+            width: 100%;
+            height: 85vh;
+            .imgElegirnos{
+                height: 100%;
+            }
+            .textEle{
+                height: 100%;
+            }
+        }
+    }
+}
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width:992px){
+    .gridNosotros{
+        grid-template-areas:
+        "hist hist"
+        "ele ele";
+        .contHistoria{
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
+            .texthist{
+                height: 100%;
+            }
+            .imgHistoria{
+                height: 100%;
+            }
+        }
+        .contElegirnos{
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
+            .imgElegirnos{
+                height: 100%;
+            }
+            .textEle{
+                height: 100%;
+            }
+        }
+    }
+}
 

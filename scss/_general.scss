@@ -41,7 +41,25 @@ h3{
     text-align: center;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
 }
-/*----------MAP-ANCHOS--------------------*/
+@mixin boton{
+    background-color: $botonBgrd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: $botonText;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 20px;
+    box-shadow: 3px 3px 5px #00000046;
+    &:hover{
+        background-color: $botonBgrdHover;
+        transform: scale(1.1);
+        border: $borderColor1;
+        color: $botonTextHover;
+    }
+}
+/*----------MAP-ANCHOS--------------------*/ 
 @each $k, $v in $width-map{
     .bloque-#{$k}{
         width: $v;

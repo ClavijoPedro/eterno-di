@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
 * {
   margin: 0;
@@ -87,16 +86,44 @@ h3 {
   max-height: 90px;
 }
 
+#header .navbar-toggler {
+  border: none !important;
+  font-size: 2.5rem;
+}
+
+#header .navbar-collapse {
+  padding: 50px;
+  margin-top: 15px;
+}
+
 #header .nav-item a {
   color: #141414;
   font-weight: 800;
   text-transform: uppercase;
+  padding: 15px;
 }
 
 #header .nav-item a:hover {
   color: #dd00dd;
   -webkit-transform: scale(108%);
           transform: scale(108%);
+}
+
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width: 992px) {
+  #header {
+    background-color: white;
+    border-bottom: 5px solid cyan;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #header .navbar-collapse {
+    padding: 0px;
+  }
+  #header .nav-item a {
+    margin-bottom: 0px;
+  }
 }
 
 /*-------------------HOME-----------*/
@@ -141,21 +168,8 @@ h3 {
   font-weight: 800;
 }
 
-.slideHome .carousel-caption .textSlide .botonSlide {
-  background-color: #00f7ff;
-  color: #c70988;
-  width: 150px;
-  height: 70px;
-  font-weight: 800;
-  font-size: 22px;
-  -webkit-box-shadow: 5px 5px 10px #00000071;
-          box-shadow: 5px 5px 10px #00000071;
-}
-
-.slideHome .carousel-caption .textSlide .botonSlide:hover {
-  background-color: #51ffff;
-  color: magenta;
-  border: 2px solid magenta;
+.slideHome .carousel-caption .textSlide .boton {
+  display: none;
 }
 
 /*----------------NOSOTROS----------------------*/
@@ -408,6 +422,193 @@ h3 {
   border-top: 4px solid #ce00ce;
 }
 
+/*----------------------------media queries---------------------------*/
+@media (min-width: 576px) and (max-width: 767px) {
+  .slideHome .boton {
+    display: none;
+  }
+}
+
+/*-------------------------------------------------------medida M---*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .slideHome .textSlide {
+    font-size: 5rem;
+  }
+  .slideHome .boton {
+    display: none;
+  }
+  .contNosotros, .contProyectos, .contBeneficios, .contServicios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contNosotros .textNosotros, .contNosotros .imgNosotros, .contProyectos .textProyectos, .contProyectos .imgProyectos {
+    width: 50%;
+    height: 100vh;
+    padding: 60px;
+  }
+  .contBeneficios {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100vh;
+    padding: 0;
+  }
+  .contBeneficios .beneficio {
+    width: 50%;
+    height: 25vh;
+    margin: 0;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .contBeneficios .icon {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  .contBeneficios p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 50%;
+  }
+  .contServicios {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contServicios .serv-proceso, .contServicios .serv-modelado, .contServicios .serv-impresion, .contServicios .serv-prototipo {
+    width: 42%;
+    height: 50vh;
+  }
+}
+
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width: 992px) {
+  #header {
+    background-color: white;
+    border-bottom: 5px solid cyan;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .slideHome {
+    border-bottom: 4px solid #c70988;
+  }
+  .slideHome .carousel-caption {
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  .slideHome .carousel-caption .textSlide {
+    background-color: #0000006c;
+    color: whitesmoke;
+    width: 500px;
+    height: 300px;
+    border-radius: 50px;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .slideHome .carousel-caption .textSlide .boton {
+    background-color: #00f7ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: #d3008d;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 20px;
+    -webkit-box-shadow: 3px 3px 5px #00000046;
+            box-shadow: 3px 3px 5px #00000046;
+    display: block;
+    width: 150px;
+    height: 70px;
+    font-size: 22px;
+  }
+  .slideHome .carousel-caption .textSlide .boton:hover {
+    background-color: cyan;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    border: 3px solid magenta;
+    color: magenta;
+  }
+  .contNosotros, .contProyectos {
+    height: 105vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contNosotros .textNosotros, .contNosotros .imgNosotros {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    color: #0e0e0e;
+  }
+  .contBeneficios {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 50vh;
+    border-top: 4px solid #c70988;
+    border-bottom: 4px solid #c70988;
+    padding: 0;
+  }
+  .contBeneficios .beneficio {
+    margin: 0;
+  }
+  .contBeneficios .beneficio .icon {
+    display: block;
+    width: 120px;
+  }
+  .contBeneficios .beneficio p {
+    width: 80%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .contProyectos .imgProyectos, .contProyectos .textProyectos {
+    height: 100%;
+    background-color: white;
+    color: #0e0e0e;
+  }
+  .contServicios {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+    padding: 0px;
+    border-top: 4px solid #c70988;
+  }
+  .contServicios .serv-proceso, .contServicios .serv-modelado, .contServicios .serv-impresion, .contServicios .serv-prototipo {
+    height: 50vh;
+    width: 22%;
+    border: 4px solid cyan;
+    background-size: cover;
+    margin: 0;
+  }
+  .contServicios .serv-proceso:hover, .contServicios .serv-modelado:hover, .contServicios .serv-impresion:hover, .contServicios .serv-prototipo:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+  }
+}
+
 .gridNosotros {
   display: -ms-grid;
   display: grid;
@@ -506,11 +707,81 @@ h3 {
   text-align: left;
 }
 
+/*-------------------------------------media queries-----------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .gridNosotros {
+        grid-template-areas: "hist hist" "ele ele";
+  }
+  .gridNosotros .contHistoria {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 85vh;
+  }
+  .gridNosotros .contHistoria .texthist {
+    height: 100%;
+  }
+  .gridNosotros .contHistoria .imgHistoria {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 85vh;
+  }
+  .gridNosotros .contElegirnos .imgElegirnos {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos .textEle {
+    height: 100%;
+  }
+}
+
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width: 992px) {
+  .gridNosotros {
+        grid-template-areas: "hist hist" "ele ele";
+  }
+  .gridNosotros .contHistoria {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  .gridNosotros .contHistoria .texthist {
+    height: 100%;
+  }
+  .gridNosotros .contHistoria .imgHistoria {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  .gridNosotros .contElegirnos .imgElegirnos {
+    height: 100%;
+  }
+  .gridNosotros .contElegirnos .textEle {
+    height: 100%;
+  }
+}
+
 .imgService {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
 }
 
 .contDetalleServicio {
@@ -581,20 +852,20 @@ h3 {
   border-radius: 50% 50%;
 }
 
-.contDiseñoProducto {
+.contDisenoProducto {
   -webkit-box-shadow: 5px 5px 10px #00000071;
           box-shadow: 5px 5px 10px #00000071;
 }
 
-.contDiseñoProducto .imgService {
+.contDisenoProducto .imgService {
   background-image: url(../media/diseno.jpg);
 }
 
-.contDiseñoProducto .iconText .img1 {
+.contDisenoProducto .iconText .img1 {
   background-image: url(../media/modelado.jpg);
 }
 
-.contDiseñoProducto .iconText .img2 {
+.contDisenoProducto .iconText .img2 {
   background-image: url(../media/modelado.jpg);
 }
 
@@ -649,7 +920,62 @@ h3 {
   background-image: url(../media/prototipo.jpg);
 }
 
-/*-------------------------------GALERIA---------------------------*/
+/*---------------------------------------media queries----------------------------*/
+@media (min-width: 992px) {
+  .imgService {
+    height: 100vh;
+  }
+  .contDetalleServicio {
+    background-color: white;
+  }
+  .contDetalleServicio .iconText {
+    height: 25%;
+  }
+  .contDetalleServicio .iconText .img1, .contDetalleServicio .iconText .img2 {
+    margin-bottom: 180px;
+  }
+  .contDisenoProducto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 200px 0;
+  }
+  .contImpre3d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 200px 0;
+  }
+  .contModelado3d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 200px 0;
+  }
+  .contPrototipos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 200px 0;
+  }
+}
+
 .galeria {
   margin-bottom: 80px;
 }
@@ -690,7 +1016,7 @@ h3 {
 
 .contContacto .formulario {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,7 +1033,7 @@ h3 {
 }
 
 .contContacto .formulario .tituloSec {
-  color: #006666;
+  color: #00b6b6;
   margin-bottom: 50px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
 }
@@ -715,7 +1041,7 @@ h3 {
 .contContacto .formulario .clienteEmpresa {
   width: 260px;
   margin-bottom: 20px;
-  border: 3px solid cyan;
+  border: 3px solid magenta;
   border-radius: 10px;
   padding: 5px;
   -webkit-box-shadow: 3px 3px 5px #00000046;
@@ -729,7 +1055,7 @@ h3 {
 .contContacto .formulario .block {
   display: block;
   width: 260px;
-  border: 3px solid #00e6e6;
+  border: 3px solid cyan;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 20px;
@@ -743,12 +1069,20 @@ h3 {
   padding: 10px 20px;
   border-radius: 20px;
   border: none;
-  color: #c70988;
+  color: #d3008d;
   font-size: 25px;
   font-weight: 800;
   margin-top: 20px;
   -webkit-box-shadow: 3px 3px 5px #00000046;
           box-shadow: 3px 3px 5px #00000046;
+}
+
+.contContacto .formulario .boton:hover {
+  background-color: cyan;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border: 3px solid magenta;
+  color: magenta;
 }
 
 .contContacto .contacto {
@@ -773,10 +1107,11 @@ h3 {
 .contContacto .contacto li {
   list-style: none;
   padding-bottom: 50px;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: white;
   text-align: left;
+  text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
 }
 
 .contContacto .animate__fadeIn {
@@ -786,6 +1121,26 @@ h3 {
 .contContacto .animate__fadeInRight {
   --animate-duration: 3s;
   --animate-delay: 1s;
+}
+
+/*--------------------media queries----------------------*/
+@media (min-width: 992px) {
+  .contContacto {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contContacto .formulario {
+    width: 50%;
+  }
+  .contContacto .contacto {
+    width: 50%;
+    height: 110vh;
+  }
+  .contContacto .contacto li {
+    font-size: 2rem;
+  }
 }
 
 #recibe {
@@ -816,264 +1171,40 @@ h3 {
 }
 
 #footer .logo {
-  max-width: 80px;
-  max-height: 80px;
+  display: none;
 }
 
-#footer .logo img {
-  display: block;
-  width: 100%;
-}
-
-#footer .navFoot ul {
-  list-style: none;
-  font-size: 0.9rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-#footer .navFoot ul a {
-  text-decoration: none;
-  color: #0f0f0f;
-  display: block;
-  margin: 5px;
-}
-
-#footer .navFoot ul a:hover {
-  color: #dd00dd;
-  -webkit-transform: scale(108%);
-          transform: scale(108%);
+#footer .navFoot {
+  display: none;
 }
 
 #footer .maps {
-  width: 200px;
-  height: 120px;
-  overflow: hidden;
+  display: none;
 }
 
 #footer .social img {
   max-width: 60px;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
+/*--------------------------media queries--------------------*/
 @media (min-width: 576px) and (max-width: 767px) {
-  .slideHome .botonSlide {
-    display: none;
-  }
-  #footer .logo {
-    display: none;
-  }
-  #footer .navFoot {
-    display: none;
-  }
-  #footer .maps {
-    display: none;
-  }
   #footer .social img {
-    max-width: 60px;
-    margin: 0 50px;
+    max-width: 50px;
+    margin: 0 55px;
   }
 }
 
-/*-------------------------------------------------------medida iPad Chrome*/
+/*-------------------------------------------------------medida M*/
 @media (min-width: 768px) and (max-width: 991px) {
-  .slideHome .textSlide {
-    font-size: 5rem;
-  }
-  .slideHome .botonSlide {
-    display: none;
-  }
-  .contNosotros, .contProyectos, .contBeneficios, .contServicios {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .contNosotros .textNosotros, .contNosotros .imgNosotros, .contProyectos .textProyectos, .contProyectos .imgProyectos {
-    width: 50%;
-    height: 100vh;
-    padding: 60px;
-  }
-  .contBeneficios {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    height: 100vh;
-    padding: 0;
-  }
-  .contBeneficios .beneficio {
-    width: 50%;
-    height: 25vh;
-    margin: 0;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  .contBeneficios .icon {
-    width: 120px;
-    margin-bottom: 20px;
-  }
-  .contBeneficios p {
-    font-size: 1.2rem;
-    text-align: center;
-    width: 50%;
-  }
-  .contServicios {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .contServicios .serv-proceso, .contServicios .serv-modelado, .contServicios .serv-impresion, .contServicios .serv-prototipo {
-    width: 42%;
-    height: 50vh;
-  }
-  #footer .logo {
-    display: none;
-  }
-  #footer .navFoot {
-    display: none;
-  }
-  #footer .maps {
-    display: none;
-  }
   #footer .social img {
     max-width: 70px;
     margin: 0 70px;
-  }
-  /*-------------------------------------------------SECCION NOSOTROS*/
-  .gridNosotros {
-        grid-template-areas: "hist hist" "ele ele";
-  }
-  .gridNosotros .contHistoria {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    height: 85vh;
-  }
-  .gridNosotros .contHistoria .texthist {
-    height: 100%;
-  }
-  .gridNosotros .contHistoria .imgHistoria {
-    height: 100%;
-  }
-  .gridNosotros .contElegirnos {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    height: 85vh;
-  }
-  .gridNosotros .contElegirnos .imgElegirnos {
-    height: 100%;
-  }
-  .gridNosotros .contElegirnos .textEle {
-    height: 100%;
   }
 }
 
 /*------------------------------------------------MEDIDA L---*/
 @media (min-width: 992px) {
-  #header {
-    background-color: white;
-    border-bottom: 5px solid cyan;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .slideHome {
-    border-bottom: 4px solid #c70988;
-  }
-  .slideHome .carousel-caption {
-    height: 100%;
-    width: 100%;
-    top: 0;
-  }
-  .slideHome .carousel-caption .textSlide {
-    background-color: #0000006c;
-    color: whitesmoke;
-    width: 500px;
-    height: 300px;
-    border-radius: 50px;
-    font-size: 2rem;
-    font-weight: 800;
-  }
-  .contNosotros, .contProyectos {
-    height: 105vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .contNosotros .textNosotros, .contNosotros .imgNosotros {
-    height: 100%;
-    width: 50%;
-    background-color: white;
-    color: #0e0e0e;
-  }
-  .contBeneficios {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    height: 50vh;
-    border-top: 4px solid #c70988;
-    border-bottom: 4px solid #c70988;
-    padding: 0;
-  }
-  .contBeneficios .beneficio {
-    margin: 0;
-  }
-  .contBeneficios .beneficio .icon {
-    display: block;
-    width: 120px;
-  }
-  .contBeneficios .beneficio p {
-    width: 80%;
-    text-align: center;
-    font-size: 1.1rem;
-  }
-  .contProyectos .imgProyectos, .contProyectos .textProyectos {
-    height: 100%;
-    background-color: white;
-    color: #0e0e0e;
-  }
-  .contServicios {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100vh;
-    padding: 0px;
-    border-top: 4px solid #c70988;
-  }
-  .contServicios .serv-proceso, .contServicios .serv-modelado, .contServicios .serv-impresion, .contServicios .serv-prototipo {
-    height: 50vh;
-    width: 22%;
-    border: 4px solid cyan;
-    background-size: cover;
-    margin: 0;
-  }
-  .contServicios .serv-proceso:hover, .contServicios .serv-modelado:hover, .contServicios .serv-impresion:hover, .contServicios .serv-prototipo:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-transition: all 600ms;
-    transition: all 600ms;
-  }
   #footer {
     border-top: 4px solid cyan;
     background-color: white;
@@ -1085,174 +1216,40 @@ h3 {
         justify-content: space-around;
     margin: 0;
   }
-  /*------------------------------------------------SECCION NOSOTROS*/
-  .gridNosotros {
-        grid-template-areas: "hist hist" "ele ele";
-  }
-  .gridNosotros .contHistoria {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    height: 100vh;
-  }
-  .gridNosotros .contHistoria .texthist {
-    height: 100%;
-  }
-  .gridNosotros .contHistoria .imgHistoria {
-    height: 100%;
-  }
-  .gridNosotros .contElegirnos {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    height: 100vh;
-  }
-  .gridNosotros .contElegirnos .imgElegirnos {
-    height: 100%;
-  }
-  .gridNosotros .contElegirnos .textEle {
-    height: 100%;
-  }
-  /*-----------------------------------------------SECCION SERVICIOS*/
-  .contDetalleServicio {
-    background-color: white;
-  }
-  .contDetalleServicio .iconText {
-    height: 25%;
-  }
-  .contDetalleServicio .iconText .img1, .contDetalleServicio .iconText .img2 {
-    margin-bottom: 180px;
-  }
-  .contDiseñoProducto {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin: 200px 0;
-  }
-  .contImpre3d {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    margin: 200px 0;
-  }
-  .contModelado3d {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin: 200px 0;
-  }
-  .contPrototipos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    margin: 200px 0;
-  }
-  /*----------------------------------------------------CONTACTO---*/
-  .contContacto {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-  .contContacto .formulario {
-    width: 50%;
-    height: 110vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contContacto .formulario .tituloSec {
-    color: #006666;
-    margin-bottom: 50px;
-  }
-  .contContacto .formulario .clienteEmpresa {
-    border: 3px solid #00e6e6;
-    border-radius: 10px;
-    width: 260px;
-    margin-bottom: 20px;
-    padding: 0px;
-  }
-  .contContacto .formulario .block {
+  #footer .logo {
     display: block;
-    border: 3px solid #00e6e6;
-    padding: 5px;
-    margin-bottom: 20px;
+    max-width: 80px;
+    max-height: 80px;
   }
-  .contContacto .formulario .boton {
-    background-color: #00f7ff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    color: #c70988;
-    font-size: 25px;
-    font-weight: 800;
-    margin-top: 20px;
+  #footer .logo img {
+    display: block;
+    width: 100%;
   }
-  .contContacto .formulario .boton:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    border: 2px solid magenta;
-    color: magenta;
+  #footer .navFoot {
+    display: block;
   }
-  .contContacto .contacto {
-    background-color: #00e6e6;
-    width: 50%;
-    height: 110vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contContacto .contacto li {
+  #footer .navFoot ul {
     list-style: none;
-    padding-bottom: 50px;
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  #footer .navFoot ul a {
+    text-decoration: none;
+    color: #0f0f0f;
+    display: block;
+    margin: 5px;
+  }
+  #footer .navFoot ul a:hover {
+    color: #dd00dd;
+    -webkit-transform: scale(108%);
+            transform: scale(108%);
+  }
+  #footer .maps {
+    display: block;
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

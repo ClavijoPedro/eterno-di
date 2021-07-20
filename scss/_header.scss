@@ -5,13 +5,37 @@
         max-width: 90px;
         max-height: 90px;
     }
+    .navbar-toggler{
+        border: none !important;
+        font-size: 2.5rem;
+         
+    }
+    .navbar-collapse{
+        padding: 50px;
+        margin-top: 15px;
+    }
     .nav-item a{
         color: #141414;
         font-weight: 800;
         text-transform: uppercase;
+        padding: 15px;
         &:hover{
             color:#dd00dd;
             transform: scale(108%);
+        }
+    }
+}
+/*------------------------------------------------MEDIDA L---*/
+@media (min-width:992px){
+    #header{
+        background-color: white;
+        border-bottom: 5px solid cyan;
+        justify-content: space-between;
+        .navbar-collapse{
+            padding: 0px;
+        }
+        .nav-item a{
+            margin-bottom: 0px;
         }
     }
 }
