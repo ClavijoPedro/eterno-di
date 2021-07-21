@@ -193,13 +193,13 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.5rem;
-  padding: 0 80px;
+  padding: 0 30px;
 }
 
 .contNosotros .imgNosotros {
   height: 50vh;
   width: 100%;
-  background-image: url(../media/nosotross.jpg);
+  background-image: url(../media/estrategico.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -243,16 +243,17 @@ h3 {
   margin-top: 70px;
 }
 
-.contBeneficios .icon {
+.contBeneficios .beneficio i {
+  font-size: 9rem;
   margin-bottom: 20px;
 }
 
-.contBeneficios p {
+.contBeneficios .beneficio p {
   text-transform: uppercase;
-  color: #313131;
+  color: #006161;
   width: 32%;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0;
   text-align: center;
 }
@@ -278,7 +279,7 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.5rem;
-  padding: 0 80px;
+  padding: 0 30px;
 }
 
 .contProyectos .imgProyectos {
@@ -427,6 +428,12 @@ h3 {
   .slideHome .boton {
     display: none;
   }
+  .contNosotros .textNosotros {
+    padding: 0 80px;
+  }
+  .contProyectos .textProyectos {
+    padding: 0 80px;
+  }
 }
 
 /*-------------------------------------------------------medida M---*/
@@ -538,7 +545,7 @@ h3 {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     border: 3px solid magenta;
-    color: magenta;
+    color: #ff00ff;
   }
   .contNosotros, .contProyectos {
     height: 105vh;
@@ -551,6 +558,7 @@ h3 {
     width: 50%;
     background-color: white;
     color: #0e0e0e;
+    padding: 80px;
   }
   .contBeneficios {
     -webkit-box-orient: horizontal;
@@ -578,6 +586,7 @@ h3 {
     height: 100%;
     background-color: white;
     color: #0e0e0e;
+    padding: 80px;
   }
   .contServicios {
     -webkit-box-orient: horizontal;
@@ -989,6 +998,8 @@ h3 {
 .galeria .itemGaleria {
   margin: 0 !important;
   padding: 20px;
+  min-height: 300px;
+  max-width: 400px;
 }
 
 .galeria .itemGaleria img {
@@ -999,12 +1010,13 @@ h3 {
      object-fit: cover;
   -webkit-box-shadow: 5px 5px 10px #00000071;
           box-shadow: 5px 5px 10px #00000071;
+  border: 3px solid cyan;
 }
 
 .galeria .itemGaleria img:hover {
   -webkit-transform: scale(115%);
           transform: scale(115%);
-  border: 4px solid #d400d4;
+  border: 3px solid magenta;
   -webkit-transition: all 800ms;
   transition: all 800ms;
 }
@@ -1082,7 +1094,7 @@ h3 {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   border: 3px solid magenta;
-  color: magenta;
+  color: #ff00ff;
 }
 
 .contContacto .contacto {

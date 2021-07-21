@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     font-size: 1.5rem;
-    padding: 0 80px;   
+    padding: 0 30px;   
 }
 @mixin img-block($bgn, $alto:50vh, $ancho:100%){
     height: $alto;
@@ -74,12 +74,11 @@
 /*----------------NOSOTROS----------------------*/
 .contNosotros{
     background-color: #c70988;
-    
     .textNosotros{
         @include text-block;
     }
     .imgNosotros{
-        @include img-block(nosotross)
+        @include img-block(estrategico)
     }
 }
 /*-----------------BENEFICIOS------------------------*/
@@ -99,18 +98,19 @@
         justify-content: space-evenly;
         align-items: center;
         margin-top: 70px;
-    }
-    .icon{
-        margin-bottom: 20px;
-    }
-    p{
-        text-transform: uppercase;
-        color: #313131;
-        width: 32%;
-        font-weight: 800;
-        font-size: 1rem;
-        margin: 0;
-        text-align: center;
+        i{
+            font-size: 9rem;
+            margin-bottom: 20px;   
+        }
+        p{
+            text-transform: uppercase;
+            color: rgb(0, 97, 97);
+            width: 32%;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin: 0;
+            text-align: center;
+        }
     }
 }
 /*-------------------PROYECTOS------------------*/
@@ -154,6 +154,16 @@
             display: none;
         }
     }
+    .contNosotros{
+        .textNosotros{
+            padding: 0 80px;
+        }
+    }
+    .contProyectos{
+        .textProyectos{
+            padding: 0 80px;
+        }
+    }          
 }
 /*-------------------------------------------------------medida M---*/
 @media (min-width:768px) and (max-width:991px){
@@ -243,8 +253,9 @@
         .textNosotros, .imgNosotros{
             height: 100%;
             width: 50%;
-            background-color: white;
+            background-color: $bgdColor3;
             color: #0e0e0e;
+            padding: 80px;
         }
     } 
     .contBeneficios{
@@ -268,8 +279,9 @@
     }
     .contProyectos .imgProyectos, .contProyectos .textProyectos{
         height: 100%;
-        background-color: white;
+        background-color:$bgdColor3;
         color: #0e0e0e;
+        padding: 80px;
     }
     .contServicios{
         flex-direction: row;
