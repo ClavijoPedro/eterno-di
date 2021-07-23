@@ -1,3 +1,4 @@
+
 .imgService{
     background-position: center;
     background-size: cover;
@@ -22,41 +23,37 @@
             text-align: center;
         }
     }
-    .iconText{
+    .iconContainer{
         height: 50%;
         background-color: cyan;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        .iconText{
+            text-align: center;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            i{
+                font-size: 70px;
+                display: block;
+                margin-bottom: 30px;
+            }
+            p{
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+        }
     }
-    .img1{
-        background-position: center;
-        background-size: cover;
-        width: 200px;
-        height: 200px;
-        border-radius: 50% 50%;
-    }
-    .img2{
-        background-position: center;
-        background-size: cover;
-        width: 200px;
-        height: 200px;
-        border-radius: 50% 50%;
-    }
-
 }
 .contDisenoProducto{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/diseno.jpg);
-    }
-    .iconText{
-        .img1{
-            background-image: url(../media/modelado.jpg);
-        } 
-        .img2{
-            background-image: url(../media/modelado.jpg);
-        }
     }
 }
 .contImpre3d{
@@ -64,42 +61,18 @@
     .imgService{
         background-image: url(../media/impresion.jpg);
     }
-    .iconText{
-        .img1{
-            background-image: url(../media/impresion.jpg);
-        }
-        .img2{
-            background-image: url(../media/impresion.jpg);
-        }
-    } 
 }
 .contModelado3d{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/modelado.jpg);
     }
-    .iconText{
-        .img1{
-            background-image: url(../media/modelado.jpg);
-        } 
-        .img2{
-            background-image: url(../media/modelado.jpg);
-        }
-    } 
 } 
 .contPrototipos{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/prototipo.jpg);
     }
-    .iconText{
-        .img1{
-            background-image: url(../media/prototipo.jpg);
-        }
-        .img2{
-            background-image: url(../media/prototipo.jpg);
-        }
-    } 
 }
 /*---------------------------------------media queries----------------------------*/ 
 @media (min-width:992px){
@@ -108,10 +81,23 @@
     }
     .contDetalleServicio{
         background-color: white;
-        .iconText{
+        .iconContainer{
             height: 25%;
-            .img1, .img2{
-                margin-bottom: 180px;
+            .iconText{
+                text-align: center;
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                i{
+                    font-size: 50px;
+                    display: block;
+                }
+                p{
+                    text-align: center;
+                    font-weight: 700;
+                }
             }
         }
     }

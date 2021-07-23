@@ -244,7 +244,7 @@ h3 {
 }
 
 .contBeneficios .beneficio i {
-  font-size: 9rem;
+  font-size: 130px;
   margin-bottom: 20px;
 }
 
@@ -831,7 +831,7 @@ h3 {
   text-align: center;
 }
 
-.contDetalleServicio .iconText {
+.contDetalleServicio .iconContainer {
   height: 50%;
   background-color: cyan;
   display: -webkit-box;
@@ -845,20 +845,33 @@ h3 {
           justify-content: space-evenly;
 }
 
-.contDetalleServicio .img1 {
-  background-position: center;
-  background-size: cover;
-  width: 200px;
-  height: 200px;
-  border-radius: 50% 50%;
+.contDetalleServicio .iconContainer .iconText {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.contDetalleServicio .img2 {
-  background-position: center;
-  background-size: cover;
-  width: 200px;
-  height: 200px;
-  border-radius: 50% 50%;
+.contDetalleServicio .iconContainer .iconText i {
+  font-size: 70px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.contDetalleServicio .iconContainer .iconText p {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .contDisenoProducto {
@@ -870,28 +883,12 @@ h3 {
   background-image: url(../media/diseno.jpg);
 }
 
-.contDisenoProducto .iconText .img1 {
-  background-image: url(../media/modelado.jpg);
-}
-
-.contDisenoProducto .iconText .img2 {
-  background-image: url(../media/modelado.jpg);
-}
-
 .contImpre3d {
   -webkit-box-shadow: 5px 5px 10px #00000071;
           box-shadow: 5px 5px 10px #00000071;
 }
 
 .contImpre3d .imgService {
-  background-image: url(../media/impresion.jpg);
-}
-
-.contImpre3d .iconText .img1 {
-  background-image: url(../media/impresion.jpg);
-}
-
-.contImpre3d .iconText .img2 {
   background-image: url(../media/impresion.jpg);
 }
 
@@ -904,28 +901,12 @@ h3 {
   background-image: url(../media/modelado.jpg);
 }
 
-.contModelado3d .iconText .img1 {
-  background-image: url(../media/modelado.jpg);
-}
-
-.contModelado3d .iconText .img2 {
-  background-image: url(../media/modelado.jpg);
-}
-
 .contPrototipos {
   -webkit-box-shadow: 5px 5px 10px #00000071;
           box-shadow: 5px 5px 10px #00000071;
 }
 
 .contPrototipos .imgService {
-  background-image: url(../media/prototipo.jpg);
-}
-
-.contPrototipos .iconText .img1 {
-  background-image: url(../media/prototipo.jpg);
-}
-
-.contPrototipos .iconText .img2 {
   background-image: url(../media/prototipo.jpg);
 }
 
@@ -937,11 +918,31 @@ h3 {
   .contDetalleServicio {
     background-color: white;
   }
-  .contDetalleServicio .iconText {
+  .contDetalleServicio .iconContainer {
     height: 25%;
   }
-  .contDetalleServicio .iconText .img1, .contDetalleServicio .iconText .img2 {
-    margin-bottom: 180px;
+  .contDetalleServicio .iconContainer .iconText {
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contDetalleServicio .iconContainer .iconText i {
+    font-size: 50px;
+    display: block;
+  }
+  .contDetalleServicio .iconContainer .iconText p {
+    text-align: center;
+    font-weight: 700;
   }
   .contDisenoProducto {
     display: -webkit-box;
@@ -992,7 +993,7 @@ h3 {
 .galeria .tituloSec {
   background-color: #ea00ff;
   border-radius: 0px 0 20px 25px;
-  color: #333333;
+  color: white;
 }
 
 .galeria .itemGaleria {
