@@ -11,68 +11,70 @@
     <!--------------------------------------favicon--------------------->
     <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <!-----------boxicons--------------------------------------------------------->
+    <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>    
 </head>
     <body>
-        <div id="header" class="container-fluid  px-5 py-1">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="media/logo.png" class="logo mb-100px" alt="logo"></a>
-                <button class="navbar-toggler bg-transparent border border-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="equipo-diseno.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="procesos-servicios-diseno.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="galeria-diseno.html">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                      </li>
-                  </ul>
-                </div>
-            </nav>
-        </div><!--fin header-->
-        <div id="recibe">
-            <p class="tituloSec">¡gracias por contactarnos!</p>
-            <P>Su mensaje ha sido enviado correctamente.</P>
-        </div><!--fin contenido-->
-        <div id="footer">
-            <div class="logo">
-                <a href="index.html"><img src="media/logo.png" alt="logo"></a>
+      <div id="header" class="container-fluid  px-3 py-1">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img src="media/logo.png" class="logo" alt="logo"></a>
+            <button class="navbar-toggler bg-transparent border border-dark " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="equipo-diseno.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="procesos-servicios-diseno.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="galeria-diseno.html">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+              </ul>
             </div>
-            <nav class="navFoot">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="equipo-diseno.html">nosotros</a></li>
-                    <li><a href="procesos-servicios-diseno.html">servicios</a></li>
-                    <li><a href="galeria-diseno.html">galeria</a></li>
-                    <li><a href="contacto.html">contacto</a></li>
-                </ul>
-            </nav>
-            <div class="maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.7793580456873!2d-58.494527784577535!3d-34.50847755997239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1160d982657%3A0x75974f78c88a0068!2sAv.%20Maip%C3%BA%203000%2C%20Olivos%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1624334512117!5m2!1ses!2sar" title="maps" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="social">
-                <a href="#"><img src="media/faceb.png" alt="facebook"></a>
-                <a href="#"><img src="media/insta.png" alt="instagram"></a>
-                <a href="#"><img src="media/whats.png" alt="whatsapp"></a>
-            </div>
+        </nav>
+      </div><!--fin header-->
+      <div id="recibe">
+          <p class="tituloSec">¡gracias por contactarnos!</p>
+          <P>Su mensaje ha sido enviado correctamente.</P>
+      </div><!--fin contenido-->
+      <div id="footer" class="w-100 d-flex justify-content-around align-items-center py-4">
+        <div class="logo d-none d-lg-block">
+            <a href="index.html"><img src="media/logo.png" alt="logo"></a>
         </div>
-        <!--bootstrap jscrip-------------------->
-        <script src="js/jquery-3.5.1.slim.min.js"></script>
-        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-----wowjs----------------------------->
-        <script src="js/wow.min.js"></script>
-        <script>
-            new WOW().init();
-        </script><!--fin footer-->
+        <nav class="navFoot d-none d-lg-block">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="equipo-diseno.html">nosotros</a></li>
+                <li><a href="procesos-servicios-diseno.html">servicios</a></li>
+                <li><a href="galeria-diseno.html">galeria</a></li>
+                <li><a href="contacto.html">contacto</a></li>
+            </ul>
+        </nav>
+        <div class="maps d-none d-lg-block rounded">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.7793580456873!2d-58.494527784577535!3d-34.50847755997239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1160d982657%3A0x75974f78c88a0068!2sAv.%20Maip%C3%BA%203000%2C%20Olivos%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1624334512117!5m2!1ses!2sar" title="maps" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="social  d-flex justify-content-between ">
+            <a href="#"><i class='bx bxl-facebook-square' style='color:#00e4e4' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' style='color:#00e4e4'  ></i></a>
+            <a href="#"><i class='bx bxl-whatsapp' style='color:#00e4e4'  ></i></a>
+        </div>
+      </div>
+      <!--bootstrap jscrip-------------------->
+      <script src="js/jquery-3.5.1.slim.min.js"></script>
+      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-----wowjs----------------------------->
+      <script src="js/wow.min.js"></script>
+      <script>
+          new WOW().init();
+      </script><!--fin footer-->
     </body>
 </html>

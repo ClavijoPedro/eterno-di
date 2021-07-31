@@ -55,8 +55,6 @@
     .carousel-caption{
         height: 100%;
         width: 100%;
-        top: 0;
-        left: 0;
         .textSlide{
             background-color: #0000006c;
             color: whitesmoke;
@@ -125,7 +123,7 @@
 }
 /*---------------SERVICIOS-----------------------------------------------*/
 .contServicios{
-    width: 100%;
+    width: 90%;
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -142,7 +140,7 @@
         width: 100%;
         background-color: #000000b9;
         margin: 0;
-        padding: 10px 0;
+        padding: 0;
         border-top: 4px solid #ce00ce;
     }
 }

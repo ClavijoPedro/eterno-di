@@ -5,68 +5,33 @@
 /*---------------------------------------------REGLAS GENERALES----*/
 body{
     font-family: 'Open Sans', sans-serif;
-    /*background-color: rgb(53, 53, 53);*/ 
 }
 h1{
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
-    line-height: 50px;
+    @include tagH-prop(32px, 15px);
+    @media all and(min-width: 768px){
+        @include tagH-prop(35px, 10px);
+    }
+    @media all and(min-width: 992px){
+        @include tagH-prop(40px, 10px);
+    }
 }
 h2{
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
-    line-height: 50px;
+    @include tagH-prop(32px, 15px);
 }
 h3{
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
-
+    @include tagH-prop( 1.75rem, 10px);
 }
 .tituloSec{
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.384);
+    @include tagH-prop(32px, 10px);
 }
-@mixin boton{
-    background-color: $botonBgrd;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    color: $botonText;
-    font-size: 25px;
-    font-weight: 800;
-    margin-top: 20px;
-    box-shadow: 3px 3px 5px #00000046;
-    &:hover{
-        background-color: $botonBgrdHover;
-        transform: scale(1.1);
-        border: $borderColor1;
-        color: $botonTextHover;
-    }
+.bttn{
+    height: 65px;
 }
-/*----------MAP-ANCHOS--------------------*/ 
-@each $k, $v in $width-map{
-    .bloque-#{$k}{
-        width: $v;
-    }
+.py-6{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
-@for $degrade from 1 through 3{
-    .botonDeg-#{$degrade}{
-        color: linear-gradient(0deg, #c100cf 1%*$degrade+10, #5184ea 46%*$degrade+10, #00e4ff 100%*$degrade+10);;
-    }
+.px-6{
+    padding-left: 4rem;
+    padding-right: 4rem;
 }

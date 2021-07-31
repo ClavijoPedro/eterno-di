@@ -1,21 +1,11 @@
 $fuente: 'Open Sans', sans-serif;
-$slide-img: 
-    diseno,
-    proceso,
-    prototipo,
-;
 $servicios-block:
     proceso,
     modelado,
     impresion,
     prototipo,
 ;
-$width-map: (
-    "s":25%,
-    "m":50%,
-    "l":75%,
-    "f":100%,
-);
+
 $navBorder:2px solid black;
 $navBorderHover:2px solid magenta;
 $borderColor1: 3px solid magenta;
@@ -27,4 +17,6 @@ $botonBgrdHover:cyan;
 $bgdColor1: cyan;
 $bgdColor2:magenta;
 $bgdColor3:white;
-$iconText-color: white;
+$bgdBlack: #101010;
+$iconText-color: rgb(0, 97, 97);
+

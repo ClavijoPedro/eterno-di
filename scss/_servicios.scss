@@ -36,39 +36,44 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.288);
             i{
                 font-size: 70px;
                 display: block;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
             p{
                 text-align: center;
                 color: white;
                 text-transform: uppercase;
                 font-weight: 800;
+                font-size: 16px;
+                width: 150px;
+                margin: 0;
             }
         }
     }
 }
-.contDisenoProducto{
+#contDisenoProducto{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/diseno.jpg);
     }
 }
-.contImpre3d{
+#contImpre3d{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/impresion.jpg);
     }
 }
-.contModelado3d{
+#contModelado3d{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/modelado.jpg);
     }
 } 
-.contPrototipos{
+#contPrototipos{
     box-shadow: 5px 5px 10px #00000071;
     .imgService{
         background-image: url(../media/prototipo.jpg);
@@ -101,27 +106,24 @@
             }
         }
     }
-    .contDisenoProducto{
+    #contDisenoProducto{
         display: flex;
         flex-direction: row;
         margin: 200px 0;  
     }
-    .contImpre3d{
+    #contImpre3d{
         display: flex;
         flex-direction: row-reverse;
         margin: 200px 0;
-
     }
-    .contModelado3d{
+    #contModelado3d{
         display: flex;
         flex-direction: row;
         margin: 200px 0;
-
     }
-    .contPrototipos{
+    #contPrototipos{
         display: flex;
         flex-direction: row-reverse;
         margin: 200px 0;
-
     }
 }

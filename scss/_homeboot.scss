@@ -1,0 +1,177 @@
+.carousel{
+    .carousel-inner{
+        .carousel-item{
+            transition: transform 4s ease, opacity 5s ease-out;
+            img{
+                height: 88vh;
+                object-fit: cover;
+            }
+        }
+        .carousel-caption{
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            .textSlide{
+                background-color: #0000006c;
+                color: whitesmoke;
+                width: 100%;
+                height: 250px;
+                p{
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.733)
+                }
+                .boton{
+                     @include boton;
+                } 
+            }
+        }
+    }   
+}
+/*-----------------diseño estrategico-------------------*/
+.contNosotros{
+    background-color: #c70988;
+    .textNosotros{
+        @include text-block;
+    }
+    .imgNosotros{
+        @include img-block(estrategico)
+    }
+}
+/*-----------------Proyectos----------------------------*/
+.contProyectos{
+        background-color: #c70988;
+    .textProyectos{
+        @include text-block;
+    }
+    .imgProyectos{
+        @include img-block(diseno)
+    }
+}
+/*-----------------beneficios---------------------------*/
+.contBeneficios{
+    background-color: rgb(0, 236, 236);
+    i{
+        color: whitesmoke;
+        font-size: 110px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
+    }
+    p{
+        color:$iconText-color;
+        font-size: 1.3rem;
+        font-weight: 800;
+        text-transform: uppercase;  
+    }
+}
+/*----------------servicios-------------------------------------*/
+.contServicios{
+    margin: 5rem 0;
+    .cardServicio{
+        width: 20rem;
+        min-width: 300px;
+        min-height: 40vh;
+        height: 400px;
+        margin: 1rem 0.5rem;
+        border-radius: 20px;
+        overflow: hidden;
+        border:$borderColor2;
+        .card-body{
+            border-top:$borderColor1;
+            background-color: #141414  
+        }
+        img{
+            height: 83%;
+            object-fit: cover;
+        }
+        .card-body{
+            height: 17%;
+            h3{
+                color: whitesmoke;
+            }
+
+        }
+
+    }  
+}
+/*-----------------------------------MEDIA QUERIES--------------------*/
+@media all and (min-width: 768px){
+    .carousel{
+        border-bottom: 10px solid #ffffff;
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    height: 50vh;
+                }
+            }
+            .carousel-caption{
+                .textSlide{
+                    p{
+                        font-size: 22px;
+                    }
+                }
+            } 
+        }
+    }
+    /*-----------------diseño estrategico-------------------*/
+    .contNosotros{
+        .textNosotros{
+            @include text-block(50vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgNosotros{
+            @include img-block(estrategico, 50vh);
+        }
+    }
+    /*-----------------Proyectos----------------------------*/
+    .contBeneficios{
+        border-top: 10px solid #ffffff;
+        border-bottom: 10px solid #ffffff;
+    }
+    .contProyectos{
+        border-bottom: 10px solid #ffffff;
+        box-shadow: 0 1px 2px  rgba(0, 0, 0, 0.24);
+        .textProyectos{
+            @include text-block(50vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgProyectos{
+            @include img-block(diseno, 50vh)
+        }
+    }
+}
+@media all and (min-width: 992px){
+    /*-----------------diseño estrategico-------------------*/
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    height: 88vh;
+                }
+            }
+            .carousel-caption{
+                .textSlide{
+                    height: 300px;
+                    p{
+                        font-size: 24px;
+                    }
+                }
+            }
+        } 
+    }
+    .contNosotros{
+        .textNosotros{
+            @include text-block(75vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgNosotros{
+            @include img-block(estrategico, 75vh);
+        }
+    }
+    /*-----------------Proyectos----------------------------*/
+    .contProyectos{
+        .textProyectos{
+            @include text-block(75vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgProyectos{
+            @include img-block(diseno, 75vh)
+        }
+    }
+}
