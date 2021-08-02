@@ -1,6 +1,6 @@
 #footer{
     background-color: $bgdBlack;
-    border-top: $borderColor2;
+    border-top: $borderColor1;
     .social{
         width: 75%;
         i{
@@ -22,7 +22,7 @@
 }
 @media all and(min-width:992px){
     #footer{
-        border-top: 4px solid cyan;
+        border-top:$borderColor2;
         background-color: white;
         .logo{
             display: block;

@@ -1,77 +1,37 @@
-@mixin caja-descripcion($direccion: column){
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: $direccion;
-    align-items: center;
-}
-@mixin text-block($alto:50vh, $ancho:100%){
-    height: $alto;
-    width: $ancho;
-    text-align: center;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.5rem;
-    padding: 0 30px;   
-}
-@mixin img-block($bgn, $alto:50vh, $ancho:100%){
-    height: $alto;
-    width: $ancho;
-    background-image: url(../media/#{$bgn}.jpg);
-    background-position: center;
-    background-size: cover;
-}
-@mixin servicio-block{
-    height: 50vh;
-    width: 80%;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    border: 5px  solid cyan;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: 70px;
-}
-
-/*-------------------HOME-----------*/
-.slideHome{
-    border-bottom: 4px solid cyan;
-    @each $v in $slide-img{
-        .carousel-item.img-#{$v}{
-            background-image: url(../media/#{$v}.jpg);
-            background-position: center;
-            background-size: cover;
-            height: 85vh;
-        }
-    }
-    .carousel-caption{
-        height: 100%;
-        width: 100%;
-        .textSlide{
-            background-color: #0000006c;
-            color: whitesmoke;
-            width: 100%;
-            height: 200px;
-            font-size: 2rem;
-            font-weight: 800;
-            .boton{
-                display: none;
+.carousel{
+    .carousel-inner{
+        .carousel-item{
+            transition: transform 4s ease, opacity 5s ease-out;
+            img{
+                height: 88vh;
+                object-fit: cover;
             }
         }
-
-    }
+        .carousel-caption{
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            .textSlide{
+                background-color: #0000006c;
+                color: whitesmoke;
+                width: 100%;
+                height: 250px;
+                p{
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.733)
+                }
+                .boton{
+                     @include boton;
+                } 
+            }
+        }
+    }   
 }
-/*----------------NOSOTROS----------------------*/
+/*-----------------diseño estrategico-------------------*/
 .contNosotros{
-    background-color: #c70988;
+    background-color: $bgdColor2;
     .textNosotros{
         @include text-block;
     }
@@ -79,228 +39,142 @@
         @include img-block(estrategico)
     }
 }
-/*-----------------BENEFICIOS------------------------*/
-.contBeneficios{
-    background-color: rgb(0, 236, 236);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    box-sizing: border-box;
-    padding-bottom: 70px;
-    .beneficio{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 70px;
-        i{
-            font-size: 130px;
-            margin-bottom: 20px;   
-        }
-        p{
-            text-transform: uppercase;
-            color: rgb(0, 97, 97);
-            width: 32%;
-            font-weight: 800;
-            font-size: 1.3rem;
-            margin: 0;
-            text-align: center;
-        }
-    }
-}
-/*-------------------PROYECTOS------------------*/
+/*-----------------Proyectos----------------------------*/
 .contProyectos{
-    background-color: #c70988;
+        background-color: $bgdColor2;
     .textProyectos{
         @include text-block;
-    } 
+    }
     .imgProyectos{
-        @include img-block(diseno) 
+        @include img-block(diseno)
     }
 }
-/*---------------SERVICIOS-----------------------------------------------*/
+/*-----------------beneficios---------------------------*/
+.contBeneficios{
+    background-color: rgb(0, 236, 236);
+    i{
+        color: whitesmoke;
+        font-size: 110px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
+    }
+    p{
+        color:$iconText-color;
+        font-size: 1.3rem;
+        font-weight: 800;
+        text-transform: uppercase;  
+    }
+}
+/*----------------servicios-------------------------------------*/
 .contServicios{
-    width: 90%;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 70px;
-    @each $v in $servicios-block{
-        .serv-#{$v}{
-            background-image: url(../media/#{$v}.jpg);
-            @include servicio-block;
-            box-shadow: 5px 5px 10px #00000071;
+    margin: 5rem 0;
+    .cardServicio{
+        width: 20rem;
+        min-width: 300px;
+        min-height: 40vh;
+        height: 400px;
+        margin: 1rem 0.5rem;
+        border-radius: 20px;
+        overflow: hidden;
+        border:$borderColor2;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.363);
+        &:hover{
+            transform: scale(1.05);
+            transition: all 500ms ease-in-out;
+        }
+        .card-body{
+            border-top:$borderColor1;
+            background-color: #141414  
+        }
+        img{
+            height: 83%;
+            object-fit: cover;
+        }
+        .card-body{
+            height: 17%;
+            h3{
+                color: whitesmoke;
+            }
+        }
+    }  
+}
+/*-----------------------------------MEDIA QUERIES--------------------*/
+@media all and (min-width: 768px){
+    .carousel{
+        border-bottom: 10px solid #ffffff;
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    height: 50vh;
+                }
+            }
+            .carousel-caption{
+                .textSlide{
+                    p{
+                        font-size: 22px;
+                    }
+                }
+            } 
         }
     }
-    h3{
-        width: 100%;
-        background-color: #000000b9;
-        margin: 0;
-        padding: 0;
-        border-top: 4px solid #ce00ce;
+    /*-----------------diseño estrategico-------------------*/
+    .contNosotros{
+        .textNosotros{
+            @include text-block(50vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgNosotros{
+            @include img-block(estrategico, 50vh);
+        }
+    }
+    /*-----------------Proyectos----------------------------*/
+    .contBeneficios{
+        border-top: 10px solid #ffffff;
+        border-bottom: 10px solid #ffffff;
+    }
+    .contProyectos{
+        border-bottom: 10px solid #ffffff;
+        box-shadow: 0 1px 2px  rgba(0, 0, 0, 0.24);
+        .textProyectos{
+            @include text-block(50vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgProyectos{
+            @include img-block(diseno, 50vh)
+        }
     }
 }
-
-/*----------------------------media queries---------------------------*/
-@media (min-width: 576px) and (max-width:767px){
-    .slideHome{
-        .boton{
-            display: none;
-        }
+@media all and (min-width: 992px){
+    /*-----------------diseño estrategico-------------------*/
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    height: 88vh;
+                }
+            }
+            .carousel-caption{
+                .textSlide{
+                    height: 300px;
+                    p{
+                        font-size: 24px;
+                    }
+                }
+            }
+        } 
     }
     .contNosotros{
         .textNosotros{
-            padding: 0 80px;
+            @include text-block(75vh, $ancho:100%, $fntSize: 1.5rem);
+        }
+        .imgNosotros{
+            @include img-block(estrategico, 75vh);
         }
     }
+    /*-----------------Proyectos----------------------------*/
     .contProyectos{
         .textProyectos{
-            padding: 0 80px;
+            @include text-block(75vh, $ancho:100%, $fntSize: 1.5rem);
         }
-    }          
-}
-/*-------------------------------------------------------medida M---*/
-@media (min-width:768px) and (max-width:991px){
-    .slideHome{
-        .textSlide{
-            font-size: 5rem;
-        }
-        .boton{
-            display: none;
-        }
-    }
-    .contNosotros, .contProyectos, .contBeneficios, .contServicios{
-        display: flex;
-    }
-    .contNosotros .textNosotros, .contNosotros .imgNosotros, .contProyectos .textProyectos, .contProyectos .imgProyectos{
-        width: 50%;
-        height: 100vh;
-        padding: 60px;
-    }
-    .contBeneficios{
-        flex-wrap: wrap;
-        flex-direction: row;
-        height: 100vh;
-        padding: 0;
-        .beneficio{
-            width: 50%;
-            height: 25vh;
-            margin: 0;
-            align-content: center;
-        }
-        .icon{
-            width: 120px;
-            margin-bottom: 20px;
-        }
-        p{
-            font-size: 1.2rem;
-            text-align: center;
-            width: 50%;
-        }
-    }
-    .contServicios{
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        .serv-proceso, .serv-modelado, .serv-impresion, .serv-prototipo{
-            width: 42%;
-            height: 50vh;
+        .imgProyectos{
+            @include img-block(diseno, 75vh)
         }
     }
 }
-/*------------------------------------------------MEDIDA L---*/
-@media (min-width:992px){
-    #header{
-        background-color: white;
-        border-bottom: 5px solid cyan;
-        justify-content: space-between;
-    }
-    .slideHome{
-        border-bottom: 4px solid #c70988;
-        .carousel-caption{
-            height: 100%;
-            width: 100%;
-            top: 0;
-            .textSlide{
-                background-color: #0000006c;
-                color: whitesmoke;
-                width: 500px;
-                height: 300px;
-                border-radius: 50px;
-                font-size: 2rem;
-                font-weight: 800;
-                .boton{
-                    @include boton;
-                    display: block;
-                    width: 150px;
-                    height: 70px;     
-                    font-size: 22px;
-                }
-            }
-        }
-    }
-    .contNosotros, .contProyectos{
-        height: 105vh;
-        display: flex;
-    }
-    .contNosotros{
-        .textNosotros, .imgNosotros{
-            height: 100%;
-            width: 50%;
-            background-color: $bgdColor3;
-            color: #0e0e0e;
-            padding: 80px;
-        }
-    } 
-    .contBeneficios{
-        flex-direction: row;
-        height: 50vh;
-        border-top: 4px solid #c70988;
-        border-bottom: 4px solid #c70988;
-        padding: 0;
-        .beneficio{
-            margin: 0;
-            .icon{
-                display: block;
-                width: 120px;
-            }
-            p{
-                width: 80%;
-                text-align: center;
-                font-size: 1.1rem;
-            }
-        }
-    }
-    .contProyectos .imgProyectos, .contProyectos .textProyectos{
-        height: 100%;
-        background-color:$bgdColor3;
-        color: #0e0e0e;
-        padding: 80px;
-    }
-    .contServicios{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100vh;
-        padding: 0px;
-        border-top: 4px solid #c70988;
-        .serv-proceso, .serv-modelado, .serv-impresion, .serv-prototipo{
-            height: 50vh;
-            width: 22%;
-            border: 4px solid cyan;
-            background-size: cover;
-            margin: 0;
-            &:hover{
-                transform: scale(1.1);
-                transition: all 600ms;
-            }
-        }
-    }
-}
-
-
-

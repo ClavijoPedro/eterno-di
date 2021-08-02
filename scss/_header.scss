@@ -1,5 +1,5 @@
 #header{
-    border-bottom: 4px solid magenta;
+    border-bottom: $borderColor1;
     background-color: cyan;
     .logo{
         width: 65px;
@@ -47,7 +47,7 @@
 @media all and(min-width:992px){
     #header{
         background-color: white;
-        border-bottom: 5px solid cyan;
+        border-bottom: $borderColor2;
         justify-content: space-between;
         .navbar-collapse{
             padding: 0px;

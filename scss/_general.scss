@@ -35,3 +35,15 @@ h3{
     padding-left: 4rem;
     padding-right: 4rem;
 }
+.px-lg-6{
+    @media all and(min-width: 992px){
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+.borderCont{
+    @media all and(min-width: 992px){
+        border: 3px solid cyan;
+        box-sizing: border-box;
+    }
+}

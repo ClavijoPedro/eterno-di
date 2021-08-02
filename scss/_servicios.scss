@@ -1,129 +1,88 @@
-
-.imgService{
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-}
 .contDetalleServicio{
-    width: 100%;
-    height: 100vh;
-    background-color: #c70988;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: $bgdColor2;
+    color: $TextColor-light;
     .textContent{
-        height: 50%;
-        margin: 0 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .description{
-            text-align: center;
-        }
+        @include text-block($alto:45vh, $ancho:100%, $fntSize: 1rem); 
     }
     .iconContainer{
-        height: 50%;
-        background-color: cyan;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        height: 22vh;
+        background-color: $bgdColor1; 
         .iconText{
-            text-align: center;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.288);
             i{
-                font-size: 70px;
-                display: block;
-                margin-bottom: 20px;
+                font-size: 50px;
+                text-shadow:$icon-shadow;
             }
             p{
-                text-align: center;
-                color: white;
+                color: $TextColor-light;
                 text-transform: uppercase;
                 font-weight: 800;
-                font-size: 16px;
-                width: 150px;
-                margin: 0;
+                font-size: 14px;
+                text-shadow:$text-shadow;
             }
         }
     }
 }
+
 #contDisenoProducto{
-    box-shadow: 5px 5px 10px #00000071;
     .imgService{
-        background-image: url(../media/diseno.jpg);
+        @include img-block(diseno, 45vh, $ancho:100%); 
     }
 }
 #contImpre3d{
-    box-shadow: 5px 5px 10px #00000071;
     .imgService{
-        background-image: url(../media/impresion.jpg);
+        @include img-block(impresion, 50vh, $ancho:100%);  
     }
 }
 #contModelado3d{
-    box-shadow: 5px 5px 10px #00000071;
     .imgService{
-        background-image: url(../media/modelado.jpg);
-    }
-} 
-#contPrototipos{
-    box-shadow: 5px 5px 10px #00000071;
-    .imgService{
-        background-image: url(../media/prototipo.jpg);
+        @include img-block(modelado, 50vh, $ancho:100%); 
     }
 }
-/*---------------------------------------media queries----------------------------*/ 
-@media (min-width:992px){
+#contPrototipos{
     .imgService{
-        height: 100vh;
+        @include img-block(prototipo, 50vh, $ancho:100%); 
     }
+}
+/*-----------------------------media queries----------------------*/
+@media all and(min-width: 768px){
     .contDetalleServicio{
-        background-color: white;
+        height: 40vh;
+        .textContent{
+            @include text-block($alto:100%, $ancho:95%, $fntSize: 1rem); 
+        }
         .iconContainer{
-            height: 25%;
+            height: 100%;
             .iconText{
-                text-align: center;
-                width: 50%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                i{
-                    font-size: 50px;
-                    display: block;
-                }
                 p{
-                    text-align: center;
-                    font-weight: 700;
+                    font-size: 16px;
                 }
             }
         }
     }
-    #contDisenoProducto{
-        display: flex;
-        flex-direction: row;
-        margin: 200px 0;  
-    }
-    #contImpre3d{
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 200px 0;
-    }
-    #contModelado3d{
-        display: flex;
-        flex-direction: row;
-        margin: 200px 0;
-    }
-    #contPrototipos{
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 200px 0;
+}
+@media all and(min-width: 992px){
+    .contDetalleServicio{
+        /*background-color: white;*/
+        height: 75vh;
+        .textContent{
+            @include text-block($alto:70%, $ancho:100%, $fntSize: 1rem); 
+        }
+        .iconContainer{
+            height: 30%;
+            width: 100%;
+            .iconText{
+                i{
+                    font-size: 70px;
+                    text-shadow:$icon-shadow;
+                }
+                p{
+                    color: $TextColor-light;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 20px;
+                    text-shadow:$text-shadow;
+                }
+            }
+        }
     }
 }

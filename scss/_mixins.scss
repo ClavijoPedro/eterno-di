@@ -8,17 +8,26 @@
 @mixin text-block($alto:55vh, $ancho:100%, $fntSize: 1.2rem){
     height: $alto;
     width: $ancho;
-    color: whitesmoke;
-    font-size: $fntSize;
-    text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.384);
-  
+    color: $TextColor-light;
+    p{
+        font-size: $fntSize;
+        text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.384);
+    }
 } 
 @mixin img-block($bgn, $altoMin:55vh, $ancho:100%){
-    min-height: $altoMin;
+    height: $altoMin;
     width: $ancho;
     background-image: url(../media/#{$bgn}.jpg);
     background-position: center;
     background-size: cover;
+    @media all and(min-width: 768px){
+        height: 40vh;
+        background-image: url(../media/#{$bgn}.jpg);
+    }
+    @media all and(min-width: 992px){
+        height: 75vh;
+        background-image: url(../media/#{$bgn}.jpg); 
+    }
 }
 @mixin servicio-block{
     min-height: 50vh;
