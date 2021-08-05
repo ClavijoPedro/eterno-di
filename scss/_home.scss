@@ -36,7 +36,7 @@
         @include text-block;
     }
     .imgNosotros{
-        @include img-block(estrategico)
+        @include img-block(estrategicosmall)
     }
 }
 /*-----------------Proyectos----------------------------*/
@@ -46,7 +46,7 @@
         @include text-block;
     }
     .imgProyectos{
-        @include img-block(diseno)
+        @include img-block(disenosmall)
     }
 }
 /*-----------------beneficios---------------------------*/
@@ -83,7 +83,7 @@
         }
         .card-body{
             border-top:$borderColor1;
-            background-color: #141414  
+            background-color: $bgdBlack;  
         }
         img{
             height: 83%;
@@ -92,7 +92,7 @@
         .card-body{
             height: 17%;
             h3{
-                color: whitesmoke;
+                color: $TextColor-light;
             }
         }
     }  
@@ -122,7 +122,7 @@
             @include text-block(50vh, $ancho:100%, $fntSize: 1.5rem);
         }
         .imgNosotros{
-            @include img-block(estrategico, 50vh);
+            @include img-block(estrategicomedium, 50vh);
         }
     }
     /*-----------------Proyectos----------------------------*/
@@ -132,12 +132,11 @@
     }
     .contProyectos{
         border-bottom: 10px solid #ffffff;
-        box-shadow: 0 1px 2px  rgba(0, 0, 0, 0.24);
         .textProyectos{
             @include text-block(50vh, $ancho:100%, $fntSize: 1.5rem);
         }
         .imgProyectos{
-            @include img-block(diseno, 50vh)
+            @include img-block(disenomedium, 50vh)
         }
     }
 }
@@ -174,7 +173,7 @@
             @include text-block(75vh, $ancho:100%, $fntSize: 1.5rem);
         }
         .imgProyectos{
-            @include img-block(diseno, 75vh)
+            @include img-block(diseno, 75vh);
         }
     }
 }

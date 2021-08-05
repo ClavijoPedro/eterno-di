@@ -25,22 +25,22 @@
 
 #contDisenoProducto{
     .imgService{
-        @include img-block(diseno, 45vh, $ancho:100%); 
-    }
+        @include img-block(disenosmall, 45vh, $ancho:100%); 
+    } 
 }
 #contImpre3d{
     .imgService{
-        @include img-block(impresion, 50vh, $ancho:100%);  
+        @include img-block(impresionsmall, 50vh, $ancho:100%);   
     }
 }
 #contModelado3d{
     .imgService{
-        @include img-block(modelado, 50vh, $ancho:100%); 
+        @include img-block(modeladosmall, 50vh, $ancho:100%); 
     }
 }
 #contPrototipos{
     .imgService{
-        @include img-block(prototipo, 50vh, $ancho:100%); 
+        @include img-block(prototiposmall, 50vh, $ancho:100%); 
     }
 }
 /*-----------------------------media queries----------------------*/
@@ -58,6 +58,26 @@
                 }
             }
         }
+    }
+}
+#contDisenoProducto{
+    .imgService{
+        background-image: url(../media/disenomedium.jpg); 
+    } 
+}
+#contImpre3d{
+    .imgService{
+        background-image: url(../media/impresionmedium.jpg);    
+    }
+}
+#contModelado3d{
+    .imgService{
+        background-image: url(../media/modeladosmall.jpg); 
+    }
+}
+#contPrototipos{
+    .imgService{
+        background-image: url(../media/prototipomedium.jpg); 
     }
 }
 @media all and(min-width: 992px){
@@ -83,6 +103,26 @@
                     text-shadow:$text-shadow;
                 }
             }
+        }
+    }
+    #contDisenoProducto{
+        .imgService{
+            background-image: url(../media/diseno.jpg); 
+        } 
+    }
+    #contImpre3d{
+        .imgService{
+            background-image: url(../media/impresion.jpg);    
+        }
+    }
+    #contModelado3d{
+        .imgService{
+            background-image: url(../media/modelado.jpg); 
+        }
+    }
+    #contPrototipos{
+        .imgService{
+            background-image: url(../media/prototipo.jpg); 
         }
     }
 }

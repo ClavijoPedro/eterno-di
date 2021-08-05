@@ -5,29 +5,28 @@
     flex-direction: $direccion;
     align-items: center;
 }
-@mixin text-block($alto:55vh, $ancho:100%, $fntSize: 1.2rem){
+@mixin text-block($alto:55vh, $ancho:100%, $color: $TextColor-light, $fntSize: 1.2rem){
     height: $alto;
     width: $ancho;
-    color: $TextColor-light;
+    color: $color;
     p{
         font-size: $fntSize;
         text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.384);
+        /*width: $ancho;*/ 
     }
 } 
-@mixin img-block($bgn, $altoMin:55vh, $ancho:100%){
-    height: $altoMin;
+@mixin img-block($bg, $alto:55vh, $ancho:100%){ 
+    height: $alto;
     width: $ancho;
-    background-image: url(../media/#{$bgn}.jpg);
+    background-image: url(../media/#{$bg}.jpg);
     background-position: center;
     background-size: cover;
-    @media all and(min-width: 768px){
+    /*@media all and(min-width: 768px){
         height: 40vh;
-        background-image: url(../media/#{$bgn}.jpg);
     }
     @media all and(min-width: 992px){
-        height: 75vh;
-        background-image: url(../media/#{$bgn}.jpg); 
-    }
+        height: 75vh; 
+    }*/
 }
 @mixin servicio-block{
     min-height: 50vh;
@@ -50,6 +49,7 @@
 @mixin tagH-prop ($fntSize, $mb){
     text-transform: uppercase;
     font-size: $fntSize;
+    color: $TextColor-light;
     font-weight: 800;
     margin-bottom: $mb;
     text-align: center;

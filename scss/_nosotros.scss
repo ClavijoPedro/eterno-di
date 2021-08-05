@@ -1,115 +1,78 @@
-@mixin contenedor-grid ($area, $direccion){
-    height: 110vh;
-    grid-area: $area;
-    display: flex;
-    flex-direction: $direccion;
-    background-color: #d9ffff;
+
+.imgHistoria{
+    @include img-block(nosotrossmall, $alto:50vh, $ancho:100%);
 }
-@mixin text-grid{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-@mixin img-grid ($bgn){
-    width: 100%;
-    height: 50%;
-    background-image: url(../media/#{$bgn}.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.gridNosotros{
-    display: grid;
-    grid-template-areas: 
-    "hist"
-    "ele";
-    .contHistoria{
-        @include contenedor-grid(hist, column-reverse);
-        .texthist{
-            @include text-grid;
-            p{
-                padding: 0 60px;
-                text-align: left;
-            }
-        }
-        .imgHistoria{
-            @include img-grid(nosotross);
+.contHistoria{
+    background-color: $bgdBlack;
+    padding: 6rem 0;
+    .texthist{
+        @include text-block($alto:auto, $ancho:100%, $color: $TextColor-light, $fntSize: 1.2rem); 
+        .subLine{           
+            height: 5px;
+            background-color: $bgdColor1;
+            border-radius: 3px;
         }
     } 
+    .textEle{
+        .tituloSec{
+            font-size: 32px;
+        }
+        @include text-block($alto:auto, $ancho:90%, $color: $TextColor-light, $fntSize: 1.2rem);
+    }
+}
+.contEquipo{
+    background-color: $bgdColor1;
+    .cardEquipo{
+        width: 20rem;
+        min-width: 290px;
+        min-height: 40vh;
+        height: 400px;
+        margin: 1rem 0.5rem;
+        border-radius: 20px;
+        overflow: hidden;
+        border:$borderColor1;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.363);
+        &:hover{
+            transform: scale(1.05);
+            transition: all 500ms ease-in-out;
+        }
+        img{
+            height: 75%;
+            object-fit: cover;
+        }
+        .card-body{
+            height: 25%;
+            p{
+                color: $TextColor-light;  
+            }
+            h3{
+                color: $TextColor-light;
+                font-size: 16px;
+                text-transform:capitalize;
+            }
+        }
+    }  
 }
 .contElegirnos{
-    @include contenedor-grid(ele, column);
-    .imgElegirnos{
-        @include img-grid(elegirnos);
-    }
+    background-color: $bgdColor2;
     .textEle{
-        @include text-grid;
-        p{
-            padding: 0 60px;
-            text-align: left;
-        }
+        @include text-block($alto:55vh, $ancho:100%, $color: $TextColor-light, $fntSize: 1.2rem);
+    }
+    .imgElegirnos{
+        @include img-block(nosotros, $alto:55vh, $ancho:100%);
     }
 }
-/*-------------------------------------media queries-----------------------------------*/
-@media (min-width:768px) and (max-width:991px){
-    .gridNosotros{
-        grid-template-areas:
-        "hist hist"
-        "ele ele";
-        .contHistoria{
-            flex-direction: row;
-            width: 100%;
-            height: 85vh;
-            .texthist{
-                height: 100%;
-            }
-            .imgHistoria{
-                height: 100%;
-            }
-        }
-        .contElegirnos{
-            flex-direction: row;
-            width: 100%;
-            height: 85vh;
-            .imgElegirnos{
-                height: 100%;
-            }
-            .textEle{
-                height: 100%;
-            }
-        }
+/*-----------------------media queries-------------------*/
+@media all and(min-width: 768px){
+    .imgHistoria{
+        @include img-block(nosotrosmedium, $alto:35vh, $ancho:100%);
     }
 }
-/*------------------------------------------------MEDIDA L---*/
-@media (min-width:992px){
-    .gridNosotros{
-        grid-template-areas:
-        "hist hist"
-        "ele ele";
-        .contHistoria{
-            flex-direction: row;
-            width: 100%;
-            height: 100vh;
-            .texthist{
-                height: 100%;
-            }
-            .imgHistoria{
-                height: 100%;
-            }
-        }
-        .contElegirnos{
-            flex-direction: row;
-            width: 100%;
-            height: 100vh;
-            .imgElegirnos{
-                height: 100%;
-            }
-            .textEle{
-                height: 100%;
-            }
-        }
+@media all and(min-width: 992px){
+    .imgHistoria{
+        @include img-block(nosotros, $alto:45vh, $ancho:100%);
     }
 }
+
+
 
