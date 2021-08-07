@@ -1,4 +1,3 @@
-
 .imgHistoria{
     @include img-block(nosotrossmall, $alto:50vh, $ancho:100%);
 }
@@ -6,7 +5,7 @@
     background-color: $bgdBlack;
     padding: 6rem 0;
     .texthist{
-        @include text-block($alto:auto, $ancho:100%, $color: $TextColor-light, $fntSize: 1.2rem); 
+        @include text-block($alto:auto, $ancho:100%, $color: $textColor-light, $fntSize: 1.2rem); 
         .subLine{           
             height: 5px;
             background-color: $bgdColor1;
@@ -17,7 +16,7 @@
         .tituloSec{
             font-size: 32px;
         }
-        @include text-block($alto:auto, $ancho:90%, $color: $TextColor-light, $fntSize: 1.2rem);
+        @include text-block($alto:auto, $ancho:90%, $color: $textColor-light, $fntSize: 1.2rem);
     }
 }
 .contEquipo{
@@ -43,34 +42,32 @@
         .card-body{
             height: 25%;
             p{
-                color: $TextColor-light;  
+                color: $textColor-light;  
             }
             h3{
-                color: $TextColor-light;
+                color: $textColor-light;
                 font-size: 16px;
                 text-transform:capitalize;
             }
         }
     }  
 }
-.contElegirnos{
-    background-color: $bgdColor2;
-    .textEle{
-        @include text-block($alto:55vh, $ancho:100%, $color: $TextColor-light, $fntSize: 1.2rem);
-    }
-    .imgElegirnos{
-        @include img-block(nosotros, $alto:55vh, $ancho:100%);
-    }
-}
 /*-----------------------media queries-------------------*/
 @media all and(min-width: 768px){
     .imgHistoria{
         @include img-block(nosotrosmedium, $alto:35vh, $ancho:100%);
     }
+    .contHistoria{
+        border-top: $borderColor2;
+        border-bottom: $borderColor1;
+    }
 }
 @media all and(min-width: 992px){
     .imgHistoria{
         @include img-block(nosotros, $alto:45vh, $ancho:100%);
+    }
+    .contHistoria{
+        padding: 10rem 0;
     }
 }
 

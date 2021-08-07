@@ -1,128 +1,114 @@
-.contDetalleServicio{
-    background-color: $bgdColor2;
-    color: $TextColor-light;
-    .textContent{
-        @include text-block($alto:45vh, $ancho:100%, $fntSize: 1rem); 
-    }
-    .iconContainer{
-        height: 22vh;
-        background-color: $bgdColor1; 
-        .iconText{
-            i{
-                font-size: 50px;
-                text-shadow:$icon-shadow;
-            }
-            p{
-                color: $TextColor-light;
-                text-transform: uppercase;
-                font-weight: 800;
-                font-size: 14px;
-                text-shadow:$text-shadow;
-            }
-        }
-    }
-}
-
-#contDisenoProducto{
+.blockServicio{
     .imgService{
-        @include img-block(disenosmall, 45vh, $ancho:100%); 
-    } 
-}
-#contImpre3d{
-    .imgService{
-        @include img-block(impresionsmall, 50vh, $ancho:100%);   
+        @include img-block(disenosmall, 35vh, $ancho:100%);
     }
-}
-#contModelado3d{
-    .imgService{
-        @include img-block(modeladosmall, 50vh, $ancho:100%); 
-    }
-}
-#contPrototipos{
-    .imgService{
-        @include img-block(prototiposmall, 50vh, $ancho:100%); 
-    }
-}
-/*-----------------------------media queries----------------------*/
-@media all and(min-width: 768px){
     .contDetalleServicio{
-        height: 40vh;
+        background-color: $bgdColor2;
+        color: $textColor-light;
         .textContent{
-            @include text-block($alto:100%, $ancho:95%, $fntSize: 1rem); 
+            @include text-block(55vh, $ancho:100%);
         }
         .iconContainer{
-            height: 100%;
-            .iconText{
-                p{
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-}
-#contDisenoProducto{
-    .imgService{
-        background-image: url(../media/disenomedium.jpg); 
-    } 
-}
-#contImpre3d{
-    .imgService{
-        background-image: url(../media/impresionmedium.jpg);    
-    }
-}
-#contModelado3d{
-    .imgService{
-        background-image: url(../media/modeladosmall.jpg); 
-    }
-}
-#contPrototipos{
-    .imgService{
-        background-image: url(../media/prototipomedium.jpg); 
-    }
-}
-@media all and(min-width: 992px){
-    .contDetalleServicio{
-        /*background-color: white;*/
-        height: 75vh;
-        .textContent{
-            @include text-block($alto:70%, $ancho:100%, $fntSize: 1rem); 
-        }
-        .iconContainer{
-            height: 30%;
-            width: 100%;
+            height: 22vh;
+            background-color: $bgdColor1; 
             .iconText{
                 i{
-                    font-size: 70px;
+                    font-size: 50px;
                     text-shadow:$icon-shadow;
                 }
                 p{
-                    color: $TextColor-light;
+                    color: $textColor-light;
                     text-transform: uppercase;
                     font-weight: 800;
-                    font-size: 20px;
+                    font-size: 14px;
                     text-shadow:$text-shadow;
                 }
             }
         }
     }
-    #contDisenoProducto{
-        .imgService{
-            background-image: url(../media/diseno.jpg); 
-        } 
-    }
-    #contImpre3d{
-        .imgService{
-            background-image: url(../media/impresion.jpg);    
+}
+/*---------------------------------media queries---------------------------*/
+@media all and(min-width: 768px){
+    .blockServicio{
+        height: 90vh;
+        .contDetalleServicio{
+            height: 50%;
+            .textContent{
+                @include text-block($alto:100%, $ancho:100%, $fntSize: 1.2rem);
+            }
+            .iconContainer{
+                height: 100%;
+                .iconText{
+                    i{
+                        font-size: 60px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
         }
     }
-    #contModelado3d{
+    #contDisenoProducto.blockServicio{
         .imgService{
-            background-image: url(../media/modelado.jpg); 
+            @include img-block(disenomedium, 50%, $ancho:100%);
         }
     }
-    #contPrototipos{
+    #contImpre3d.blockServicio{
         .imgService{
-            background-image: url(../media/prototipo.jpg); 
+            @include img-block(impresionmedium, 50%, $ancho:100%);
+        }
+    }
+    #contModelado3d.blockServicio{
+        .imgService{
+            @include img-block(modeladosmall, 50%, $ancho:100%);
+        }
+    }
+    #contPrototipos.blockServicio{
+        .imgService{
+            @include img-block(prototipomedium, 50%, $ancho:100%);
+        }
+    }
+}
+@media all and(min-width: 992px){
+    .blockServicio{
+        height: 75vh;
+        .contDetalleServicio{
+            height: 100%;
+            .textContent{
+                @include text-block($alto:70%, $ancho:100%, $fntSize: 1.5rem);
+            }
+            .iconContainer{
+                height: 30%;
+                .iconText{
+                    i{
+                        font-size: 70px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #contDisenoProducto.blockServicio{
+        .imgService{
+            @include img-block(diseno, 100%, $ancho:100%);
+        }
+    }
+    #contImpre3d.blockServicio{
+        .imgService{
+            @include img-block(impresion, 100%, $ancho:100%);
+        }
+    }
+    #contModelado3d.blockServicio{
+        .imgService{
+            @include img-block(modelado, 100%, $ancho:100%);
+        }
+    }
+    #contPrototipos.blockServicio{
+        .imgService{
+            @include img-block(prototipo, 100%, $ancho:100%);
         }
     }
 }

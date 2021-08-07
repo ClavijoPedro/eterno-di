@@ -1,82 +1,55 @@
 .contContacto{
-    width: 100%;
-    text-align: center;
     .formulario{
-        width: 100%;
-        height: 110vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .tituloSec{
-            color: #00b6b6;
-            margin-bottom: 50px;
-            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.219);
-        }
-        .clienteEmpresa{
-            width: 260px;
-            margin-bottom: 20px;
-            border: $borderColor1;
-            border-radius: 10px;
-            padding: 5px;
-            box-shadow: 3px 3px 5px #00000046;
-            input{
-                margin: 20px;
+        form{
+            .tituloSec{
+                color: $textColor-cyan;
+            }
+            .clienteEmpresa{
+                font-weight: 700;
+                border: $borderColor1;
+                border-radius: 10px;
+                width: 260px;
+                box-shadow: 3px 3px 5px #00000046;
+            }
+            textarea{
+                resize: none;
+              }
+            .block{
+                width: 260px;
+                border-radius: 10px;
+                border: $borderColor2;
+                &:focus{
+                    outline: none;
+                }
             }
         }
-        .block{
-            display: block;
-            width: 260px;
-            border: $borderColor2;
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 20px;
-            box-shadow: 3px 3px 5px #00000046;
-        }
-        .boton{
-            @include boton;
-        }
     }
-    .contacto{
-        background-color: #00e6e6;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        li{
-            list-style: none;
-            padding-bottom: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: white;
-            text-align: left;
-            text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
+    .datosContacto{
+        background-color: $bgdColor1;
+        ul{
+            li{
+                list-style: none;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: $textColor-light;
+                text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
+                i{
+                    font-size: 3rem;
+                }
+            }
         }
-    }
-    .animate__fadeIn{
-        --animate-duration: 3s;
-    }
-    .animate__fadeInRight{
-        --animate-duration: 3s;
-        --animate-delay: 1s;
     }
 }
-
-/*--------------------media queries----------------------*/
-@media (min-width:992px){
+@media all and(min-width:768px){
     .contContacto{
-        width: 100%;
-        display: flex;
-        .formulario{
-            width: 50%;
-        }
-        .contacto{
-            width: 50%;
-            height: 110vh;
-            li{
-                font-size: 2rem;
+        .datosContacto{
+            ul{
+                li{
+                    font-size: 2rem;
+                    i{
+                        font-size: 4rem;
+                    }
+                }
             }
         }
     }
