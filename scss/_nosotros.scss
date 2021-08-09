@@ -64,7 +64,7 @@
 }
 @media all and(min-width: 992px){
     .imgHistoria{
-        @include img-block(nosotros, $alto:45vh, $ancho:100%);
+        @include img-block(nosotros, $alto:50vh, $ancho:100%);
     }
     .contHistoria{
         padding: 10rem 0;

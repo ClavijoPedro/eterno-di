@@ -1,7 +1,4 @@
 .blockServicio{
-    .imgService{
-        @include img-block(disenosmall, 35vh, $ancho:100%);
-    }
     .contDetalleServicio{
         background-color: $bgdColor2;
         color: $textColor-light;
@@ -25,6 +22,26 @@
                 }
             }
         }
+    }
+}
+#contDisenoProducto.blockServicio{
+    .imgService{
+        @include img-block(disenosmall, 40vh, $ancho:100%);
+    }
+}
+#contImpre3d.blockServicio{
+    .imgService{
+        @include img-block(impresionesmall, 40vh, $ancho:100%);
+    }
+}
+#contModelado3d.blockServicio{  
+    .imgService{
+        @include img-block(modeladosmall, 40vh, $ancho:100%);
+    }
+}
+#contPrototipos.blockServicio{
+    .imgService{
+        @include img-block(prototiposmall, 40vh, $ancho:100%);
     }
 }
 /*---------------------------------media queries---------------------------*/

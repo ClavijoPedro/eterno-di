@@ -22,6 +22,9 @@
                     outline: none;
                 }
             }
+            .boton:focus{
+            outline: none;
+            }
         }
     }
     .datosContacto{
@@ -29,7 +32,7 @@
         ul{
             li{
                 list-style: none;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 font-weight: 700;
                 color: $textColor-light;
                 text-shadow: 2px 2px 2px rgba(17, 17, 17, 0.301);
@@ -37,6 +40,28 @@
                     font-size: 3rem;
                 }
             }
+        }
+    }
+}
+.modal-content{
+    border: $borderColor1;
+    font-size: 1.2rem;
+    color: $iconText-color;
+    text-shadow: $text-shadow;
+    border-radius: 15px;
+    .tituloSec{
+        font-size: 1.5rem;
+        color: $textColor-cyan;
+        text-shadow: $text-shadow;
+    }
+    i{
+        font-size: 12rem;
+        color: $iconText-color;
+    }
+    .modal-footer{
+        border: none;
+        button:focus{
+            outline: none;
         }
     }
 }
